@@ -19,7 +19,7 @@ const io = new Server(server, {
 // ── Middleware ──────────────────────────
 app.use(
   cors({
-    origin: allowedOrigin,
+    origin: process.env.CLIENT_URL,
     credentials: true,
   }),
 );
