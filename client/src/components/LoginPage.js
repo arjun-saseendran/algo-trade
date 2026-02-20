@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 
 const C = {
   bg:      '#07090f',
@@ -26,7 +26,7 @@ export default function LoginPage({ onLoginSuccess }) {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.get('/api/auth/login');
+      const res = await api.get('/api/auth/login');
       setLoginUrl(res.data.loginUrl);
       // Open Kite login in new tab
       window.open(res.data.loginUrl, '_blank');
@@ -46,7 +46,7 @@ export default function LoginPage({ onLoginSuccess }) {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.post('/api/auth/callback', {
+      const res = await api.post('/api/auth/callback', {
         request_token: token.trim()
       });
       if (res.data.success) {

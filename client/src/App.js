@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from './utils/api';
 import { SocketProvider } from './context/SocketContext';
 import Dashboard from './components/Dashboard';
 import LoginPage from './components/LoginPage';
@@ -11,7 +11,7 @@ export default function App() {
 
   // Check if already connected on load
   useEffect(() => {
-    axios.get('/api/auth/status')
+    api.get('/api/auth/status')
       .then(r => {
         setKiteConnected(r.data.connected);
         setChecking(false);

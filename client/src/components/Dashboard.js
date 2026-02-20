@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useSocket } from '../context/SocketContext';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -73,20 +73,20 @@ export default function Dashboard() {
 
   // Check API status
   useEffect(() => {
-    axios.get('/api/auth/status')
+    api.get('/api/auth/status')
       .then(r => setApiConnected(r.data.connected))
       .catch(() => setApiConnected(false));
   }, [connected]);
 
   const handleStart = async () => {
     setStartLoading(true);
-    try { await axios.post('/api/strategy/start'); }
+    try { await api.post('/api/strategy/start'); }
     catch (e) {}
     setStartLoading(false);
   };
 
   const handleStop = async () => {
-    try { await axios.post('/api/strategy/stop'); }
+    try { await api.post('/api/strategy/stop'); }
     catch (e) {}
   };
 
@@ -120,7 +120,7 @@ export default function Dashboard() {
         <div style={{ display: 'flex', gap: 8 }}>
           {!apiConnected && (
             <button style={s.btn(C.blue)} onClick={() =>
-              axios.get('/api/auth/login').then(r => window.open(r.data.loginUrl))
+              api.get('/api/auth/login').then(r => window.open(r.data.loginUrl))
             }>
               Login Kite
             </button>
