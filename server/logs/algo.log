@@ -267,3 +267,16 @@
 [2026-02-20 19:09:31] INFO  🔌 Client connected: KUwciIyUT00a_cNHAAAB
 [2026-02-20 19:14:01] INFO  🔌 Client disconnected: KUwciIyUT00a_cNHAAAB
 [2026-02-20 19:14:01] INFO  🔌 Client connected: 664A5StytETuFVyfAAAD
+[2026-02-20 20:32:19] INFO  🤖 Trading Engine initialized
+[2026-02-20 20:32:19] INFO     Mode: 📝 PAPER TRADE
+[2026-02-20 20:32:19] INFO  ✅ Cron jobs scheduled
+[2026-02-20 20:32:19] INFO  🚀 Server running on port 3000
+[2026-02-20 20:32:19] INFO  📊 Paper Trade Mode: ON ✅
+[2026-02-20 20:32:19] INFO  MongoDB connected
+[2026-02-20 20:32:22] INFO  🔌 Client connected: qiCBODxlJmlL6ryBAAAB
+[2026-02-20 20:32:35] INFO  🔌 Client connected: yRO9JjN0IeS7hKO1AAAE
+[2026-02-20 20:33:05] INFO  🔌 Client connected: aw0Oe9mawQOONwcrAAAH
+[2026-02-20 20:33:07] INFO  🔌 Client disconnected: qiCBODxlJmlL6ryBAAAB
+[2026-02-20 20:33:20] INFO  Kite API connected ✅
+[2026-02-20 20:33:20] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-20 20:34:40] INFO  🔌 Client disconnected: aw0Oe9mawQOONwcrAAAH
