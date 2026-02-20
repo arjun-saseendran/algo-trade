@@ -1,0 +1,25 @@
+{
+  "name": "algo-trader-server",
+  "version": "1.0.0",
+  "description": "NIFTY ATM Scalping Algo Trader - Zerodha Kite API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "kiteconnect": "^4.1.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.6.3",
+    "node-cron": "^3.0.3",
+    "socket.io": "^4.6.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
