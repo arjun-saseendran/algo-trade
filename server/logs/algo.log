@@ -288,3 +288,64 @@
 [2026-02-20 22:03:42] INFO  MongoDB connected
 [2026-02-20 22:03:44] INFO  🔌 Client connected: nwLAg_3dAbI3H4rVAAAB
 [2026-02-20 22:03:54] INFO  🔌 Client disconnected: nwLAg_3dAbI3H4rVAAAB
+[2026-02-21 07:43:49] INFO  🤖 Trading Engine initialized
+[2026-02-21 07:43:49] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 07:43:49] INFO  ✅ Cron jobs scheduled
+[2026-02-21 07:43:49] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 07:43:49] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 07:43:49] INFO  Server running on port 3000
+[2026-02-21 07:43:49] INFO  Paper Trade: ON
+[2026-02-21 07:43:49] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 07:43:49] INFO  MongoDB connected
+[2026-02-21 07:44:12] INFO  🔌 Client connected: cZMHA5YtEgc1Z4-eAAAC
+[2026-02-21 07:45:22] INFO  🔌 Client disconnected: cZMHA5YtEgc1Z4-eAAAC
+[2026-02-21 08:06:39] INFO  🤖 Trading Engine initialized
+[2026-02-21 08:06:39] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 08:06:39] INFO  ✅ Cron jobs scheduled
+[2026-02-21 08:06:39] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 08:06:39] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 08:06:39] INFO  Server running on port 3000
+[2026-02-21 08:06:39] INFO  Paper Trade: ON
+[2026-02-21 08:06:39] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 08:06:39] INFO  MongoDB connected
+[2026-02-21 08:06:42] INFO  🔌 Client connected: MZ-YUUy97GUKtCsMAAAB
+[2026-02-21 08:07:09] INFO  🔌 Client connected: o7r0kXnIn_UoLgoAAAAE
+[2026-02-21 08:07:23] INFO  Kite API connected ✅
+[2026-02-21 08:07:23] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 08:09:38] INFO  🔌 Client disconnected: MZ-YUUy97GUKtCsMAAAB
+[2026-02-21 08:09:38] INFO  🔌 Client disconnected: o7r0kXnIn_UoLgoAAAAE
+[2026-02-21 08:09:49] INFO  🔌 Client connected: N86z67fwziAiGgHEAAAG
+[2026-02-21 08:09:49] INFO  🔌 Client connected: iOvXOnO6fl29yf-mAAAI
+[2026-02-21 08:10:34] INFO  🔌 Client disconnected: N86z67fwziAiGgHEAAAG
+[2026-02-21 08:10:34] INFO  🔌 Client disconnected: iOvXOnO6fl29yf-mAAAI
+[2026-02-21 08:12:10] INFO  🔌 Client connected: JJSwQRARVK2Yv59fAAAK
+[2026-02-21 08:12:10] INFO  🔌 Client connected: Re3hcpADXYpv_RGIAAAM
+[2026-02-21 08:12:55] INFO  🔌 Client disconnected: JJSwQRARVK2Yv59fAAAK
+[2026-02-21 08:12:55] INFO  🔌 Client disconnected: Re3hcpADXYpv_RGIAAAM
+[2026-02-21 08:23:54] INFO  🔌 Client connected: PRv5UbM6PVeaBNwgAAAO
+[2026-02-21 08:23:54] INFO  🔌 Client connected: ZAM6QlHIrw47B11mAAAQ
+[2026-02-21 08:25:29] INFO  🔌 Client disconnected: PRv5UbM6PVeaBNwgAAAO
+[2026-02-21 08:25:29] INFO  🔌 Client disconnected: ZAM6QlHIrw47B11mAAAQ
+[2026-02-21 09:08:38] INFO  🔌 Client connected: cmZTXbHBtX6_VU-MAAAS
+[2026-02-21 09:08:38] INFO  🔌 Client connected: B6ZbZVR1G9S1PFTDAAAU
+[2026-02-21 09:16:29] INFO  🤖 Trading Engine initialized
+[2026-02-21 09:16:29] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 09:16:29] INFO  ✅ Cron jobs scheduled
+[2026-02-21 09:16:29] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 09:16:29] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 09:16:29] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 09:16:29] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 09:16:29] INFO  Server running on port 3000
+[2026-02-21 09:16:29] INFO  Paper Trade: ON
+[2026-02-21 09:16:29] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 09:16:29] INFO  MongoDB connected
+[2026-02-21 09:16:32] INFO  🔌 Client connected: WAcqkwd8WdA1n4b5AAAB
+[2026-02-21 09:16:33] INFO  🔌 Client connected: 9-0xdCNUYLKTPAerAAAD
+[2026-02-21 09:16:39] INFO  🔌 Client disconnected: 9-0xdCNUYLKTPAerAAAD
+[2026-02-21 09:16:39] INFO  🔌 Client connected: rtmLtEKltk9e_wLUAAAG
+[2026-02-21 09:16:44] INFO  🔌 Client disconnected: WAcqkwd8WdA1n4b5AAAB
+[2026-02-21 09:17:13] INFO  🔌 Client connected: Hn9s8RUY0tGpX2PkAAAJ
+[2026-02-21 09:17:25] INFO  Kite API connected ✅
+[2026-02-21 09:17:25] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 09:18:06] INFO  🔌 Client disconnected: Hn9s8RUY0tGpX2PkAAAJ
+[2026-02-21 09:18:10] INFO  🔌 Client disconnected: rtmLtEKltk9e_wLUAAAG
