@@ -1,10 +1,10 @@
 require('dotenv').config();
-const express             = require('express');
-const http                = require('http');
-const { Server }          = require('socket.io');
-const cors                = require('cors');
-const mongoose            = require('mongoose');
-const logger              = require('./utils/logger');
+const express            = require('express');
+const http               = require('http');
+const { Server }         = require('socket.io');
+const cors               = require('cors');
+const mongoose           = require('mongoose');
+const logger             = require('./utils/logger');
 
 const app           = express();
 const server        = http.createServer(app);
@@ -23,6 +23,7 @@ app.use('/api/trades',        require('./routes/trades'));
 app.use('/api/market',        require('./routes/market'));
 app.use('/api/iron-condor',   require('./routes/ironCondor'));
 app.use('/api/delta-neutral', require('./routes/deltaNeutral'));
+app.use('/api/backtest',      require('./routes/backtest'));
 
 require('./services/socketService')(io);
 
@@ -30,9 +31,9 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => logger.info('MongoDB connected'))
   .catch(err => logger.warn('MongoDB not connected: ' + err.message));
 
-const TradingEngine       = require('./services/tradingEngine');
-const IronCondorEngine    = require('./services/ironCondorEngine');
-const DeltaNeutralEngine  = require('./services/deltaNeutralEngine');
+const TradingEngine      = require('./services/tradingEngine');
+const IronCondorEngine   = require('./services/ironCondorEngine');
+const DeltaNeutralEngine = require('./services/deltaNeutralEngine');
 
 const engine   = new TradingEngine(io);
 const icEngine = new IronCondorEngine(io);

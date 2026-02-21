@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import api from './utils/api';
-import { SocketProvider }   from './context/SocketContext';
-import Dashboard            from './components/Dashboard';
-import LoginPage            from './components/LoginPage';
-import IronCondorPage       from './components/IronCondorPage';
-import DeltaNeutralPage     from './components/DeltaNeutralPage';
+import { SocketProvider }  from './context/SocketContext';
+import Dashboard           from './components/Dashboard';
+import LoginPage           from './components/LoginPage';
+import IronCondorPage      from './components/IronCondorPage';
+import DeltaNeutralPage    from './components/DeltaNeutralPage';
+import BacktestPage        from './components/BacktestPage';
 
 const C = {
   bg: '#07090f', card: '#111820', border: '#1c2a3a',
   green: '#22d3a0', purple: '#a78bfa', teal: '#2dd4bf',
-  muted: '#4b6278', text: '#e2e8f0',
+  amber: '#f5a623', muted: '#4b6278', text: '#e2e8f0',
 };
 
 const TABS = [
-  { key: 'scalping',      label: '📈 ATM Scalping',      color: C.green  },
-  { key: 'ironcondor',    label: '🦅 Iron Condor',        color: C.purple },
-  { key: 'deltaneutral',  label: '⚖️ Delta Neutral',      color: C.teal   },
+  { key: 'scalping',     label: '📈 ATM Scalping',   color: C.green  },
+  { key: 'ironcondor',   label: '🦅 Iron Condor',     color: C.purple },
+  { key: 'deltaneutral', label: '⚖️ Delta Neutral',   color: C.teal   },
+  { key: 'backtest',     label: '🔬 Backtest',         color: C.amber  },
 ];
 
 export default function App() {
@@ -72,6 +74,7 @@ export default function App() {
       {page === 'scalping'     && <Dashboard userName={userName} />}
       {page === 'ironcondor'   && <IronCondorPage />}
       {page === 'deltaneutral' && <DeltaNeutralPage />}
+      {page === 'backtest'     && <BacktestPage />}
     </SocketProvider>
   );
 }

@@ -349,3 +349,749 @@
 [2026-02-21 09:17:25] INFO  ✅ Login successful for: Arjun Saseendran
 [2026-02-21 09:18:06] INFO  🔌 Client disconnected: Hn9s8RUY0tGpX2PkAAAJ
 [2026-02-21 09:18:10] INFO  🔌 Client disconnected: rtmLtEKltk9e_wLUAAAG
+[2026-02-21 11:38:08] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:38:08] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:38:08] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:38:08] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:38:08] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:38:08] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:38:08] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:38:08] INFO  Server running on port 3000
+[2026-02-21 11:38:08] INFO  Paper Trade: ON
+[2026-02-21 11:38:08] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:38:08] INFO  MongoDB connected
+[2026-02-21 11:38:08] INFO  🔌 Client connected: 8AgPkmiYIdGFfwXbAAAB
+[2026-02-21 11:38:42] INFO  🔌 Client connected: MOGeN-rsmSSTLLKdAAAE
+[2026-02-21 11:38:54] INFO  Kite API connected ✅
+[2026-02-21 11:38:54] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 11:41:38] INFO  🔌 Client disconnected: 8AgPkmiYIdGFfwXbAAAB
+[2026-02-21 11:42:05] INFO  🔌 Client connected: NjFS4_yBeM2zPjngAAAH
+[2026-02-21 11:42:47] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:42:47] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:42:47] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:42:47] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:42:47] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:42:47] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:42:47] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:42:47] INFO  Server running on port 3000
+[2026-02-21 11:42:47] INFO  Paper Trade: ON
+[2026-02-21 11:42:47] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:42:47] INFO  MongoDB connected
+[2026-02-21 11:42:51] INFO  🔌 Client connected: Hmczi_Qzk_XSO3zNAAAB
+[2026-02-21 11:42:52] INFO  🔌 Client connected: hqFbH8lOjrDZoGuvAAAD
+[2026-02-21 11:45:21] INFO  Kite API connected ✅
+[2026-02-21 11:45:21] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 11:45:52] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:45:52] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:45:52] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:45:52] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:45:52] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:45:52] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:45:52] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:45:52] INFO  Server running on port 3000
+[2026-02-21 11:45:52] INFO  Paper Trade: ON
+[2026-02-21 11:45:52] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:45:52] INFO  MongoDB connected
+[2026-02-21 11:45:53] INFO  🔌 Client connected: sQkyZ4MQZnf-CMW5AAAB
+[2026-02-21 11:45:54] INFO  🔌 Client connected: VJoB64pjQP30wJcWAAAD
+[2026-02-21 11:46:17] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:46:17] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:46:17] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:46:17] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:46:17] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:46:17] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:46:17] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:46:17] INFO  Server running on port 3000
+[2026-02-21 11:46:17] INFO  Paper Trade: ON
+[2026-02-21 11:46:17] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:46:17] INFO  MongoDB connected
+[2026-02-21 11:46:17] INFO  🔌 Client connected: B-hd-n8_VrZaezj1AAAB
+[2026-02-21 11:46:18] INFO  🔌 Client connected: -0Lta6l4H4xB1ommAAAD
+[2026-02-21 11:46:20] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:46:20] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:46:20] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:46:20] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:46:20] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:46:20] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:46:20] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:46:20] INFO  Server running on port 3000
+[2026-02-21 11:46:20] INFO  Paper Trade: ON
+[2026-02-21 11:46:20] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:46:20] INFO  MongoDB connected
+[2026-02-21 11:46:20] INFO  🔌 Client connected: IAELs6yDzGgHOFCWAAAB
+[2026-02-21 11:46:21] INFO  🔌 Client connected: fWJ3zwoAntBk8HauAAAD
+[2026-02-21 11:46:40] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:46:40] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:46:40] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:46:40] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:46:40] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:46:40] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:46:40] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:46:40] INFO  Server running on port 3000
+[2026-02-21 11:46:40] INFO  Paper Trade: ON
+[2026-02-21 11:46:40] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:46:40] INFO  MongoDB connected
+[2026-02-21 11:46:40] INFO  🔌 Client connected: WoYYAbU_YSq_gAhFAAAB
+[2026-02-21 11:46:42] INFO  🔌 Client connected: LC97-q0H6dq04tO3AAAD
+[2026-02-21 11:52:24] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:52:24] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:52:24] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:52:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:52:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:52:24] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:52:24] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:52:24] INFO  Server running on port 3000
+[2026-02-21 11:52:24] INFO  Paper Trade: ON
+[2026-02-21 11:52:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:52:24] INFO  MongoDB connected
+[2026-02-21 11:52:25] INFO  🔌 Client connected: TudRo8XwTYA0NcTZAAAB
+[2026-02-21 11:52:26] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:52:26] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:52:26] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:52:26] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:52:26] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:52:26] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:52:26] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:52:26] INFO  Server running on port 3000
+[2026-02-21 11:52:26] INFO  Paper Trade: ON
+[2026-02-21 11:52:26] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:52:26] INFO  MongoDB connected
+[2026-02-21 11:52:27] INFO  🔌 Client connected: QNDEx0_AA32z8FtxAAAB
+[2026-02-21 11:52:28] INFO  🔌 Client connected: zLmH-iqELMwqBCxAAAAD
+[2026-02-21 11:52:31] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:52:31] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:52:31] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:52:31] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:52:31] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:52:31] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:52:31] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:52:31] INFO  Server running on port 3000
+[2026-02-21 11:52:31] INFO  Paper Trade: ON
+[2026-02-21 11:52:31] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:52:31] INFO  MongoDB connected
+[2026-02-21 11:52:32] INFO  🔌 Client connected: e13xijRB_6mVRXbIAAAB
+[2026-02-21 11:52:33] INFO  🔌 Client connected: yDfQP3xOy6sYIxgmAAAD
+[2026-02-21 11:53:03] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:53:03] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:53:03] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:53:03] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:53:03] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:03] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:53:03] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:03] INFO  Server running on port 3000
+[2026-02-21 11:53:03] INFO  Paper Trade: ON
+[2026-02-21 11:53:03] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:53:03] INFO  MongoDB connected
+[2026-02-21 11:53:04] INFO  🔌 Client connected: PyXx-Fy3EXFozOfvAAAB
+[2026-02-21 11:53:05] INFO  🔌 Client connected: WwZPTWCT-j2tP3H4AAAD
+[2026-02-21 11:53:24] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:53:24] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:53:24] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:53:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:53:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:24] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:53:24] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:24] INFO  Server running on port 3000
+[2026-02-21 11:53:24] INFO  Paper Trade: ON
+[2026-02-21 11:53:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:53:24] INFO  MongoDB connected
+[2026-02-21 11:53:25] INFO  🔌 Client connected: REXKNnCHwf4GVyIRAAAB
+[2026-02-21 11:53:26] INFO  🔌 Client connected: in7TAKufNUPnUU_wAAAD
+[2026-02-21 11:53:27] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:53:27] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:53:27] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:53:27] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:53:27] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:27] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:53:27] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:27] INFO  Server running on port 3000
+[2026-02-21 11:53:27] INFO  Paper Trade: ON
+[2026-02-21 11:53:27] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:53:27] INFO  MongoDB connected
+[2026-02-21 11:53:28] INFO  🔌 Client connected: MQhWpS6kj8QESQB8AAAB
+[2026-02-21 11:53:29] INFO  🔌 Client connected: xQlEpI_x35MNyAtAAAAD
+[2026-02-21 11:53:49] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:53:49] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:53:49] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:53:49] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:53:49] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:49] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:53:49] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:49] INFO  Server running on port 3000
+[2026-02-21 11:53:49] INFO  Paper Trade: ON
+[2026-02-21 11:53:49] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:53:49] INFO  MongoDB connected
+[2026-02-21 11:53:49] INFO  🔌 Client connected: wuqixloj3FOfIbI-AAAB
+[2026-02-21 11:53:50] INFO  🔌 Client connected: gasLWGztOz_TbqBRAAAD
+[2026-02-21 11:53:52] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:53:52] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:53:52] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:53:52] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:53:52] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:52] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:53:52] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:53:52] INFO  Server running on port 3000
+[2026-02-21 11:53:52] INFO  Paper Trade: ON
+[2026-02-21 11:53:52] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:53:52] INFO  MongoDB connected
+[2026-02-21 11:53:53] INFO  🔌 Client connected: aPVMgx_3vBjaQahFAAAC
+[2026-02-21 11:53:53] INFO  🔌 Client connected: BKLxKFN6NRbZDmCrAAAD
+[2026-02-21 11:54:11] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:54:11] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:54:11] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:54:11] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:54:11] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:54:11] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:54:11] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:54:11] INFO  Server running on port 3000
+[2026-02-21 11:54:11] INFO  Paper Trade: ON
+[2026-02-21 11:54:11] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:54:11] INFO  MongoDB connected
+[2026-02-21 11:54:12] INFO  🔌 Client connected: 1Z3xir18tdZ8d9_WAAAB
+[2026-02-21 11:54:12] INFO  🔌 Client connected: GgOBxsUvuUBb9fSiAAAD
+[2026-02-21 11:56:01] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:01] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:01] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:01] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:01] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:01] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:01] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:01] INFO  Server running on port 3000
+[2026-02-21 11:56:01] INFO  Paper Trade: ON
+[2026-02-21 11:56:01] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:01] INFO  MongoDB connected
+[2026-02-21 11:56:03] INFO  🔌 Client connected: WluITQiYCjpSUemQAAAB
+[2026-02-21 11:56:04] INFO  🔌 Client connected: suZ-ZrrnP2wQz84qAAAD
+[2026-02-21 11:56:12] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:12] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:12] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:12] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:12] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:12] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:12] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:12] INFO  Server running on port 3000
+[2026-02-21 11:56:12] INFO  Paper Trade: ON
+[2026-02-21 11:56:12] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:12] INFO  MongoDB connected
+[2026-02-21 11:56:13] INFO  🔌 Client connected: Zfh3SMh6VjFZd8J5AAAB
+[2026-02-21 11:56:14] INFO  🔌 Client connected: gr9u8ei_dbhK5bKXAAAD
+[2026-02-21 11:56:16] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:16] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:16] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:16] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:16] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:16] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:16] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:16] INFO  Server running on port 3000
+[2026-02-21 11:56:16] INFO  Paper Trade: ON
+[2026-02-21 11:56:16] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:16] INFO  MongoDB connected
+[2026-02-21 11:56:17] INFO  🔌 Client connected: Hncjvrbvz5-SBVtMAAAB
+[2026-02-21 11:56:18] INFO  🔌 Client connected: yTX1RLHLuaYPpxGzAAAD
+[2026-02-21 11:56:21] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:21] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:21] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:21] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:21] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:21] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:21] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:21] INFO  Server running on port 3000
+[2026-02-21 11:56:21] INFO  Paper Trade: ON
+[2026-02-21 11:56:21] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:21] INFO  MongoDB connected
+[2026-02-21 11:56:21] INFO  🔌 Client connected: 5NYWHaELg0gQc2lcAAAB
+[2026-02-21 11:56:22] INFO  🔌 Client connected: FOVJWx_THlk95e1cAAAD
+[2026-02-21 11:56:24] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:24] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:24] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:24] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:24] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:24] INFO  Server running on port 3000
+[2026-02-21 11:56:24] INFO  Paper Trade: ON
+[2026-02-21 11:56:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:24] INFO  MongoDB connected
+[2026-02-21 11:56:25] INFO  🔌 Client connected: N1EYBKocSRqOEp5nAAAB
+[2026-02-21 11:56:26] INFO  🔌 Client connected: Vjwpg_RUjV4G6rb8AAAD
+[2026-02-21 11:56:27] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:27] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:27] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:27] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:27] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:27] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:27] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:27] INFO  Server running on port 3000
+[2026-02-21 11:56:27] INFO  Paper Trade: ON
+[2026-02-21 11:56:27] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:27] INFO  MongoDB connected
+[2026-02-21 11:56:29] INFO  🔌 Client connected: Ao7BaNe_YLwAWXvUAAAB
+[2026-02-21 11:56:29] INFO  🔌 Client connected: 2oJ9TRDei4ww_qOmAAAD
+[2026-02-21 11:56:36] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:36] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:36] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:36] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:36] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:36] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:36] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:36] INFO  Server running on port 3000
+[2026-02-21 11:56:36] INFO  Paper Trade: ON
+[2026-02-21 11:56:36] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:36] INFO  MongoDB connected
+[2026-02-21 11:56:38] INFO  🔌 Client connected: LBbFTCwWJcicbRVgAAAB
+[2026-02-21 11:56:38] INFO  🔌 Client connected: RnOsbCxI4ay9i8xhAAAD
+[2026-02-21 11:56:48] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:48] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:48] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:48] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:48] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:48] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:48] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:48] INFO  Server running on port 3000
+[2026-02-21 11:56:48] INFO  Paper Trade: ON
+[2026-02-21 11:56:48] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:48] INFO  MongoDB connected
+[2026-02-21 11:56:49] INFO  🔌 Client connected: Y7RfSJm5d31yV0quAAAB
+[2026-02-21 11:56:49] INFO  🔌 Client connected: IAmR_vtStu-18imfAAAD
+[2026-02-21 11:56:57] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:56:57] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:56:57] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:56:57] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:56:57] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:57] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:56:57] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:56:57] INFO  Server running on port 3000
+[2026-02-21 11:56:57] INFO  Paper Trade: ON
+[2026-02-21 11:56:57] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:56:57] INFO  MongoDB connected
+[2026-02-21 11:56:57] INFO  🔌 Client connected: WGfQr3XbglC_cdcUAAAB
+[2026-02-21 11:56:58] INFO  🔌 Client connected: c5cAYWi0nIwl9GkdAAAD
+[2026-02-21 11:57:31] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:57:31] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:57:31] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:57:31] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:57:31] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:57:31] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:57:31] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:57:31] INFO  Server running on port 3000
+[2026-02-21 11:57:31] INFO  Paper Trade: ON
+[2026-02-21 11:57:31] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:57:31] INFO  MongoDB connected
+[2026-02-21 11:57:32] INFO  🔌 Client connected: WoE2Z9JiwIdXehN1AAAB
+[2026-02-21 11:57:33] INFO  🔌 Client connected: rNB9AkWzjojCrVOOAAAD
+[2026-02-21 11:58:06] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:58:06] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:58:06] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:58:06] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:58:06] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:58:06] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:58:06] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:58:06] INFO  Server running on port 3000
+[2026-02-21 11:58:06] INFO  Paper Trade: ON
+[2026-02-21 11:58:06] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:58:06] INFO  MongoDB connected
+[2026-02-21 11:58:07] INFO  🔌 Client connected: wlJ9EueLv_k9ZLXSAAAB
+[2026-02-21 11:58:07] INFO  🔌 Client connected: nZyFmkDZstg83X2TAAAD
+[2026-02-21 11:58:56] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:58:56] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:58:56] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:58:56] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:58:56] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:58:56] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:58:56] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:58:56] INFO  Server running on port 3000
+[2026-02-21 11:58:56] INFO  Paper Trade: ON
+[2026-02-21 11:58:56] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:58:56] INFO  MongoDB connected
+[2026-02-21 11:58:57] INFO  🔌 Client connected: GUHoFooSdL1yBk_JAAAB
+[2026-02-21 11:58:58] INFO  🔌 Client connected: clhbO3kRiGQ1VX9uAAAD
+[2026-02-21 11:58:59] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:58:59] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:58:59] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:58:59] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:58:59] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:58:59] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:58:59] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:58:59] INFO  Server running on port 3000
+[2026-02-21 11:58:59] INFO  Paper Trade: ON
+[2026-02-21 11:58:59] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:58:59] INFO  MongoDB connected
+[2026-02-21 11:59:00] INFO  🔌 Client connected: NV9Gx344p2Xba0HEAAAB
+[2026-02-21 11:59:01] INFO  🔌 Client connected: FITcfbpOgHO2nPJfAAAD
+[2026-02-21 11:59:24] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:59:24] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:59:24] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:59:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:59:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:59:24] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:59:24] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:59:24] INFO  Server running on port 3000
+[2026-02-21 11:59:24] INFO  Paper Trade: ON
+[2026-02-21 11:59:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:59:24] INFO  MongoDB connected
+[2026-02-21 11:59:24] INFO  🔌 Client connected: -Mh53XOiFI7Cd_RuAAAB
+[2026-02-21 11:59:25] INFO  🔌 Client connected: x26BMkv4ytO08yc6AAAD
+[2026-02-21 11:59:58] INFO  🤖 Trading Engine initialized
+[2026-02-21 11:59:58] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 11:59:58] INFO  ✅ Cron jobs scheduled
+[2026-02-21 11:59:58] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 11:59:58] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:59:58] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 11:59:58] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 11:59:58] INFO  Server running on port 3000
+[2026-02-21 11:59:58] INFO  Paper Trade: ON
+[2026-02-21 11:59:58] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 11:59:58] INFO  MongoDB connected
+[2026-02-21 11:59:59] INFO  🔌 Client connected: 37Xin6U7bF-H87o-AAAB
+[2026-02-21 12:00:00] INFO  🔌 Client connected: Tbe7vbVdvEbCeD71AAAD
+[2026-02-21 12:00:45] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:00:45] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:00:45] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:00:45] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:00:45] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:00:45] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:00:45] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:00:45] INFO  Server running on port 3000
+[2026-02-21 12:00:45] INFO  Paper Trade: ON
+[2026-02-21 12:00:45] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:00:45] INFO  MongoDB connected
+[2026-02-21 12:00:46] INFO  🔌 Client connected: gVtelfcHRLctJ7mGAAAB
+[2026-02-21 12:00:47] INFO  🔌 Client connected: vSlAf2JLzaDf2bBbAAAD
+[2026-02-21 12:01:48] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:01:48] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:01:48] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:01:48] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:01:48] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:01:48] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:01:48] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:01:48] INFO  Server running on port 3000
+[2026-02-21 12:01:48] INFO  Paper Trade: ON
+[2026-02-21 12:01:48] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:01:48] INFO  MongoDB connected
+[2026-02-21 12:01:48] INFO  🔌 Client connected: GKGR6MZ1oIDbX4hBAAAB
+[2026-02-21 12:01:50] INFO  🔌 Client connected: RHzTkdeq5UIl0QoDAAAD
+[2026-02-21 12:02:02] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:02:02] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:02:02] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:02:02] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:02:02] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:02:02] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:02:02] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:02:02] INFO  Server running on port 3000
+[2026-02-21 12:02:02] INFO  Paper Trade: ON
+[2026-02-21 12:02:02] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:02:02] INFO  MongoDB connected
+[2026-02-21 12:02:03] INFO  🔌 Client connected: 8mTGr9WM8LfE745NAAAB
+[2026-02-21 12:02:04] INFO  🔌 Client connected: X7BkkBq9qGtOXtb5AAAD
+[2026-02-21 12:02:24] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:02:24] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:02:24] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:02:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:02:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:02:24] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:02:24] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:02:24] INFO  Server running on port 3000
+[2026-02-21 12:02:24] INFO  Paper Trade: ON
+[2026-02-21 12:02:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:02:24] INFO  MongoDB connected
+[2026-02-21 12:02:25] INFO  🔌 Client connected: ssK_aiTdncAmOdgGAAAB
+[2026-02-21 12:02:26] INFO  🔌 Client connected: V4G4Od5S1lOn3Fb9AAAD
+[2026-02-21 12:02:50] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:02:50] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:02:50] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:02:50] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:02:50] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:02:50] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:02:50] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:02:50] INFO  Server running on port 3000
+[2026-02-21 12:02:50] INFO  Paper Trade: ON
+[2026-02-21 12:02:50] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:02:50] INFO  MongoDB connected
+[2026-02-21 12:02:50] INFO  🔌 Client connected: yymwPoWYrzyFNr1EAAAB
+[2026-02-21 12:02:51] INFO  🔌 Client connected: 22_epim3OPzFpPccAAAD
+[2026-02-21 12:03:36] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:03:36] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:03:36] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:03:36] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:03:36] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:03:36] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:03:36] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:03:36] INFO  Server running on port 3000
+[2026-02-21 12:03:36] INFO  Paper Trade: ON
+[2026-02-21 12:03:36] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:03:36] INFO  MongoDB connected
+[2026-02-21 12:03:37] INFO  🔌 Client connected: C85e-Ekl6jE1fQOtAAAB
+[2026-02-21 12:03:38] INFO  🔌 Client connected: iDKFDwZVIQfi6SOvAAAD
+[2026-02-21 12:03:39] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:03:39] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:03:39] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:03:39] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:03:39] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:03:39] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:03:39] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:03:39] INFO  Server running on port 3000
+[2026-02-21 12:03:39] INFO  Paper Trade: ON
+[2026-02-21 12:03:39] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:03:39] INFO  MongoDB connected
+[2026-02-21 12:03:40] INFO  🔌 Client connected: fV1HHQagN95t4fq_AAAB
+[2026-02-21 12:03:41] INFO  🔌 Client connected: Uuv9EwKgZ_Sy8RP-AAAD
+[2026-02-21 12:03:59] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:03:59] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:03:59] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:03:59] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:03:59] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:03:59] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:03:59] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:03:59] INFO  Server running on port 3000
+[2026-02-21 12:03:59] INFO  Paper Trade: ON
+[2026-02-21 12:03:59] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:03:59] INFO  MongoDB connected
+[2026-02-21 12:04:00] INFO  🔌 Client connected: ZkMjAmCjl3bd5Zi-AAAB
+[2026-02-21 12:04:01] INFO  🔌 Client connected: u_13BsCfWXHGYZfmAAAD
+[2026-02-21 12:04:30] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:04:30] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:04:30] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:04:30] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:04:30] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:04:30] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:04:30] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:04:30] INFO  Server running on port 3000
+[2026-02-21 12:04:30] INFO  Paper Trade: ON
+[2026-02-21 12:04:30] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:04:30] INFO  MongoDB connected
+[2026-02-21 12:04:30] INFO  🔌 Client connected: aXb85R3_EU4lprKlAAAB
+[2026-02-21 12:04:32] INFO  🔌 Client connected: H8gxDlUQO9BWseE-AAAD
+[2026-02-21 12:05:17] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:05:17] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:05:17] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:05:17] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:05:17] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:05:17] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:05:17] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:05:17] INFO  Server running on port 3000
+[2026-02-21 12:05:17] INFO  Paper Trade: ON
+[2026-02-21 12:05:17] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:05:17] INFO  MongoDB connected
+[2026-02-21 12:05:17] INFO  🔌 Client connected: jqvc5oxI1YrVbyGHAAAB
+[2026-02-21 12:05:18] INFO  🔌 Client connected: y4qd0tI27ET5yAWpAAAD
+[2026-02-21 12:05:20] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:05:20] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:05:20] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:05:20] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:05:20] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:05:20] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:05:20] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:05:20] INFO  Server running on port 3000
+[2026-02-21 12:05:20] INFO  Paper Trade: ON
+[2026-02-21 12:05:20] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:05:20] INFO  MongoDB connected
+[2026-02-21 12:05:21] INFO  🔌 Client connected: JseK2rTIj3M2aYo1AAAB
+[2026-02-21 12:05:22] INFO  🔌 Client connected: rx18UF1qgES0HZUCAAAD
+[2026-02-21 12:05:40] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:05:40] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:05:40] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:05:40] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:05:40] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:05:40] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:05:40] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:05:40] INFO  Server running on port 3000
+[2026-02-21 12:05:40] INFO  Paper Trade: ON
+[2026-02-21 12:05:40] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:05:40] INFO  MongoDB connected
+[2026-02-21 12:05:41] INFO  🔌 Client connected: VGwud-53FRW-IVw4AAAB
+[2026-02-21 12:05:41] INFO  🔌 Client connected: hU_gdxUkFieXYcvAAAAD
+[2026-02-21 12:06:09] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:06:09] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:06:09] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:06:09] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:06:09] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:06:09] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:06:09] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:06:09] INFO  Server running on port 3000
+[2026-02-21 12:06:09] INFO  Paper Trade: ON
+[2026-02-21 12:06:09] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:06:09] INFO  MongoDB connected
+[2026-02-21 12:06:09] INFO  🔌 Client connected: EAJZok5NzXCxQmQnAAAB
+[2026-02-21 12:06:09] INFO  🔌 Client disconnected: EAJZok5NzXCxQmQnAAAB
+[2026-02-21 12:06:10] INFO  🔌 Client connected: wbKjBCfEvUzrqnGLAAAD
+[2026-02-21 12:06:10] INFO  🔌 Client connected: vZ6NOsEzcAmxWCnQAAAF
+[2026-02-21 12:06:57] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:06:57] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:06:57] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:06:57] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:06:57] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:06:57] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:06:57] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:06:57] INFO  Server running on port 3000
+[2026-02-21 12:06:57] INFO  Paper Trade: ON
+[2026-02-21 12:06:57] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:06:57] INFO  MongoDB connected
+[2026-02-21 12:06:57] INFO  🔌 Client connected: FGMkXv0aHuqE6WzJAAAB
+[2026-02-21 12:06:58] INFO  🔌 Client connected: eSmrUOdlC7nKmshrAAAD
+[2026-02-21 12:22:22] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:22:22] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:22:22] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:22:22] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:22:22] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:22:22] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:22:22] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:22:22] INFO  Server running on port 3000
+[2026-02-21 12:22:22] INFO  Paper Trade: ON
+[2026-02-21 12:22:22] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:22:22] INFO  MongoDB connected
+[2026-02-21 12:22:22] INFO  🔌 Client connected: -MOqh2ju0WFay8y4AAAB
+[2026-02-21 12:22:23] INFO  🔌 Client connected: MJzDmB83VtrF94zFAAAD
+[2026-02-21 12:22:57] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:22:57] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:22:57] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:22:57] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:22:57] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:22:57] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:22:57] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:22:57] INFO  Server running on port 3000
+[2026-02-21 12:22:57] INFO  Paper Trade: ON
+[2026-02-21 12:22:57] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:22:57] INFO  MongoDB connected
+[2026-02-21 12:22:58] INFO  🔌 Client connected: I7KcHkA7r1HfNtS0AAAB
+[2026-02-21 12:22:59] INFO  🔌 Client connected: eyTyNFTypeD7KbwuAAAD
+[2026-02-21 12:24:16] INFO  🔌 Client disconnected: eyTyNFTypeD7KbwuAAAD
+[2026-02-21 12:24:19] INFO  🔌 Client disconnected: I7KcHkA7r1HfNtS0AAAB
+[2026-02-21 12:24:22] INFO  🔌 Client connected: -6OcgcA5Xtto1IbdAAAG
+[2026-02-21 12:24:54] INFO  🔌 Client connected: bzFqUg9ymNP_sRxkAAAJ
+[2026-02-21 12:25:08] INFO  Kite API connected ✅
+[2026-02-21 12:25:08] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 12:29:11] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:29:11] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:29:11] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:29:11] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:29:11] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:29:11] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:29:11] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:29:11] INFO  Server running on port 3000
+[2026-02-21 12:29:11] INFO  Paper Trade: ON
+[2026-02-21 12:29:11] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:29:11] INFO  MongoDB connected
+[2026-02-21 12:29:12] INFO  🔌 Client connected: _mj1zXBDPp4IHyysAAAB
+[2026-02-21 12:29:13] INFO  🔌 Client connected: LAyLN3u-9icAJbOfAAAD
+[2026-02-21 12:29:28] INFO  🔌 Client disconnected: LAyLN3u-9icAJbOfAAAD
+[2026-02-21 12:29:39] INFO  ▶️  Trading engine started
+[2026-02-21 12:29:54] INFO  🔌 Client disconnected: _mj1zXBDPp4IHyysAAAB
+[2026-02-21 12:29:57] INFO  🔌 Client connected: BWbbybhRSWWqLlnfAAAG
+[2026-02-21 12:30:21] INFO  🔌 Client connected: 43o15KigL1YkliPNAAAJ
+[2026-02-21 12:30:32] INFO  Kite API connected ✅
+[2026-02-21 12:30:32] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 12:30:55] INFO  Running backtest: scalping
+[2026-02-21 12:30:56] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹2616705.65
+[2026-02-21 12:30:57] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:30:57] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:30:57] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:30:57] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:30:57] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:30:57] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:30:57] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:30:57] INFO  Server running on port 3000
+[2026-02-21 12:30:57] INFO  Paper Trade: ON
+[2026-02-21 12:30:57] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:30:57] INFO  MongoDB connected
+[2026-02-21 12:30:58] INFO  🔌 Client connected: h5RtljygeWVGSzqFAAAB
+[2026-02-21 12:30:59] INFO  🔌 Client connected: 6XwLxuWSjLPdS-nOAAAD
+[2026-02-21 12:31:21] INFO  Running backtest: ironcondor
+[2026-02-21 12:31:21] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-334824.23
+[2026-02-21 12:31:23] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:31:23] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:31:23] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:31:23] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:31:23] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:31:23] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:31:23] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:31:23] INFO  Server running on port 3000
+[2026-02-21 12:31:23] INFO  Paper Trade: ON
+[2026-02-21 12:31:23] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:31:23] INFO  MongoDB connected
+[2026-02-21 12:31:23] INFO  🔌 Client connected: aHH5vzHPYa1hkGxUAAAB
+[2026-02-21 12:31:25] INFO  🔌 Client connected: G_xNu5FZoBa4rOrlAAAD
+[2026-02-21 12:31:37] INFO  Running backtest: deltaneutral
+[2026-02-21 12:31:37] ERROR Backtest error (deltaneutral): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js
+/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js:317
+  const bestTrade  = trades.reduce((best, t) => t.pnl > (best?.pnl||−Infinity) ? t : best, null);
+                                                                    
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1692:18)
+    at Module._compile (node:internal/modules/cjs/loader:1735:20)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.11.1
+
+[2026-02-21 12:31:52] INFO  Running backtest: deltaneutral
+[2026-02-21 12:31:52] ERROR Backtest error (deltaneutral): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js
+/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js:317
+  const bestTrade  = trades.reduce((best, t) => t.pnl > (best?.pnl||−Infinity) ? t : best, null);
+                                                                    
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1692:18)
+    at Module._compile (node:internal/modules/cjs/loader:1735:20)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.11.1
+
+[2026-02-21 12:38:20] INFO  🔌 Client disconnected: G_xNu5FZoBa4rOrlAAAD
+[2026-02-21 12:38:40] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:38:40] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:38:40] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:38:40] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:38:40] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:38:40] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:38:40] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:38:40] INFO  Server running on port 3000
+[2026-02-21 12:38:40] INFO  Paper Trade: ON
+[2026-02-21 12:38:40] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:38:40] INFO  MongoDB connected
+[2026-02-21 12:38:41] INFO  🔌 Client connected: jJ6wympTK6pSntkRAAAB
+[2026-02-21 12:39:40] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:39:40] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:39:40] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:39:40] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:39:40] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:39:40] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:39:40] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:39:40] INFO  Server running on port 3000
+[2026-02-21 12:39:40] INFO  Paper Trade: ON
+[2026-02-21 12:39:40] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:39:40] INFO  MongoDB connected
+[2026-02-21 12:39:41] INFO  🔌 Client connected: Damwz-gvhYQLGTTNAAAB
+[2026-02-21 12:39:48] INFO  🔌 Client disconnected: Damwz-gvhYQLGTTNAAAB
+[2026-02-21 12:39:49] INFO  🔌 Client connected: B6bqn_8tvz8MqPPhAAAE
+[2026-02-21 12:40:12] INFO  🔌 Client connected: aWU7GcrnWRXA5fUTAAAH
+[2026-02-21 12:40:21] INFO  Kite API connected ✅
+[2026-02-21 12:40:21] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-21 12:40:29] INFO  Running backtest: deltaneutral
+[2026-02-21 12:40:29] INFO  Backtest complete: deltaneutral | Trades: 231 | P&L: ₹971715.84
+[2026-02-21 12:40:30] INFO  🤖 Trading Engine initialized
+[2026-02-21 12:40:30] INFO     Mode: 📝 PAPER TRADE
+[2026-02-21 12:40:30] INFO  ✅ Cron jobs scheduled
+[2026-02-21 12:40:30] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-21 12:40:30] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:40:30] INFO  ✅ Delta Neutral cron jobs scheduled
+[2026-02-21 12:40:30] INFO  🎯 Delta Neutral Engine initialized | Mode: 📝 PAPER
+[2026-02-21 12:40:30] INFO  Server running on port 3000
+[2026-02-21 12:40:30] INFO  Paper Trade: ON
+[2026-02-21 12:40:30] INFO  Allowed origin: http://localhost:3001
+[2026-02-21 12:40:30] INFO  MongoDB connected
+[2026-02-21 12:40:31] INFO  🔌 Client connected: npcPN4yywYtlrVVlAAAB
+[2026-02-21 12:40:31] INFO  🔌 Client connected: XzG-THt2_ThKWWg9AAAD
+[2026-02-21 12:42:33] INFO  🔌 Client disconnected: npcPN4yywYtlrVVlAAAB
+[2026-02-21 12:42:34] INFO  🔌 Client disconnected: XzG-THt2_ThKWWg9AAAD
