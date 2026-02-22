@@ -5,163 +5,79 @@ const path            = require('path');
 const moment          = require('moment');
 
 // ─────────────────────────────────────────
-// CONFIG — Edit these
+// CONFIG
 // ─────────────────────────────────────────
-const ACCESS_TOKEN = process.env.KITE_ACCESS_TOKEN || 'paste_your_token_here';
+const ACCESS_TOKEN = process.env.KITE_ACCESS_TOKEN;
+const API_KEY      = process.env.KITE_API_KEY;
+const kite         = new KiteConnect({ api_key: API_KEY });
+kite.setAccessToken(ACCESS_TOKEN);
 
 const INSTRUMENTS = [
-  // NSE Indices
-  { token: 256265,  symbol: 'NIFTY_50',     exchange: 'NSE' },
-  { token: 260105,     symbol: 'NIFTY_BANK',   exchange: 'NSE' },
-  // BSE Indices
-  { token: 265,       symbol: 'SENSEX',        exchange: 'BSE' },
-  // Add more as needed:
-  // { token: 738561, symbol: 'RELIANCE', exchange: 'NSE' },
-  // { token: 408065, symbol: 'HDFCBANK', exchange: 'NSE' },
+  { token: 256265, symbol: 'NIFTY_50', exchange: 'NSE' },
+  { token: 265,    symbol: 'SENSEX',   exchange: 'BSE' },
 ];
 
 const INTERVALS = [
-  { name: 'day',      interval: 'day'     },
-  { name: '15minute', interval: '15minute' },
-  { name: '5minute', interval: '5minute' },
-  { name: '3minute', interval: '3minute' },
-  // Add more if needed:
-  // { name: '5minute',  interval: '5minute'  },
-  // { name: '60minute', interval: '60minute' },
+  { name: 'day',      interval: 'day',      daysPerChunk: 1000 },
+  { name: '15minute', interval: '15minute', daysPerChunk: 100  },
+  { name: '5minute',  interval: '5minute',  daysPerChunk: 50   },
+  { name: '3minute',  interval: '3minute',  daysPerChunk: 30   }, 
 ];
 
-const YEARS    = 5;
-const OUTPUT   = path.join(__dirname, '../data/historical');
+const START_DATE = '2021-01-01';
+const END_DATE   = moment().format('YYYY-MM-DD');
+const OUTPUT     = path.join(__dirname, '../data/historical');
 
-// ─────────────────────────────────────────
-// HELPERS
-// ─────────────────────────────────────────
-const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-
-function chunkDateRange(fromDate, toDate, chunkDays) {
-  const chunks = [];
-  let current  = moment(fromDate);
-  const end    = moment(toDate);
-
-  while (current.isBefore(end)) {
-    const chunkEnd = moment(current).add(chunkDays, 'days');
-    chunks.push({
-      from: current.format('YYYY-MM-DD HH:mm:ss'),
-      to:   (chunkEnd.isAfter(end) ? end : chunkEnd).format('YYYY-MM-DD HH:mm:ss'),
-    });
-    current = chunkEnd;
-  }
-  return chunks;
-}
-
-function saveToCSV(data, filePath) {
-  if (!data || data.length === 0) return;
-
-  const headers = 'date,open,high,low,close,volume\n';
-  const rows    = data.map(c =>
-    `${c.date},${c.open},${c.high},${c.low},${c.close},${c.volume || 0}`
-  ).join('\n');
-
-  fs.writeFileSync(filePath, headers + rows);
-}
-
-function saveToJSON(data, filePath) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
-// ─────────────────────────────────────────
-// MAIN DOWNLOAD
-// ─────────────────────────────────────────
-async function downloadHistorical() {
-  // Setup Kite
-  const kite = new KiteConnect({ api_key: process.env.KITE_API_KEY });
-  kite.setAccessToken(ACCESS_TOKEN);
-
-  // Create output directories
-  if (!fs.existsSync(OUTPUT)) fs.mkdirSync(OUTPUT, { recursive: true });
-
-  const toDate   = moment().format('YYYY-MM-DD HH:mm:ss');
-  const fromDate = moment().subtract(YEARS, 'years').format('YYYY-MM-DD HH:mm:ss');
-
-  console.log(`📅 Downloading ${YEARS} years: ${fromDate} → ${toDate}`);
-  console.log(`📊 Instruments: ${INSTRUMENTS.length}`);
-  console.log(`⏱️  Intervals: ${INTERVALS.map(i => i.name).join(', ')}\n`);
-
-  let totalFiles = 0;
-  let errors     = 0;
-
+async function download() {
   for (const instrument of INSTRUMENTS) {
-    for (const intervalConfig of INTERVALS) {
+    console.log(`\n📦 Fetching ${instrument.symbol}...`);
 
-      console.log(`\n⬇️  ${instrument.symbol} | ${intervalConfig.name}`);
+    for (const inter of INTERVALS) {
+      console.log(`  🕒 Interval: ${inter.name}`);
+      let allData = [];
+      let currentStart = moment(START_DATE);
+      const finalEnd   = moment(END_DATE);
 
-      // Chunk requests — Kite limits per request
-      // Day: can fetch years at once
-      // Intraday: max 60 days per request
-      const chunkDays = intervalConfig.name === 'day' ? 365 : 60;
-      const chunks    = chunkDateRange(fromDate, toDate, chunkDays);
-      const allData   = [];
+      while (currentStart.isBefore(finalEnd)) {
+        let currentEnd = moment(currentStart).add(inter.daysPerChunk, 'days');
+        if (currentEnd.isAfter(finalEnd)) currentEnd = finalEnd;
 
-      for (let i = 0; i < chunks.length; i++) {
-        const chunk = chunks[i];
         try {
-          const data = await kite.getHistoricalData(
+          const chunk = await kite.getHistoricalData(
             instrument.token,
-            intervalConfig.interval,
-            chunk.from,
-            chunk.to
+            inter.interval,
+            currentStart.toDate(),
+            currentEnd.toDate()
           );
 
-          if (data && data.length > 0) {
-            allData.push(...data);
-            process.stdout.write(`   Chunk ${i+1}/${chunks.length}: ${data.length} candles ✅\r`);
+          if (chunk && chunk.length > 0) {
+            allData.push(...chunk);
           }
-
-          // Rate limit — 3 requests/second max
-          await sleep(400);
-
+          process.stdout.write(`    ✅ Chunk: ${currentStart.format('YYYY-MM-DD')} to ${currentEnd.format('YYYY-MM-DD')} (${chunk ? chunk.length : 0} candles)\r`);
+          
         } catch (err) {
-          console.error(`\n   ❌ Error chunk ${i+1}: ${err.message}`);
-          errors++;
-          await sleep(1000); // wait longer on error
+          // FIXED: We log the error but DO NOT break. Older data might be missing, 
+          // but we still need to fetch the newer data chunks.
+          process.stdout.write(`    ⚠️ Skipped: ${currentStart.format('YYYY-MM-DD')} (${err.message})\r`);
         }
+
+        // FIXED: Always advance the loop and wait, regardless of success or API error
+        await new Promise(res => setTimeout(res, 400));
+        currentStart = moment(currentEnd).add(1, 'second');
       }
 
       if (allData.length > 0) {
-        // Remove duplicates by date
-        const unique = allData.filter((item, index, self) =>
-          index === self.findIndex(t => t.date === item.date)
-        );
-        unique.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-        // Save CSV
-        const dir     = path.join(OUTPUT, instrument.exchange, instrument.symbol);
+        const dir = path.join(OUTPUT, instrument.exchange, instrument.symbol);
         if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-        const csvFile  = path.join(dir, `${intervalConfig.name}.csv`);
-        const jsonFile = path.join(dir, `${intervalConfig.name}.json`);
-
-        saveToCSV(unique, csvFile);
-        saveToJSON(unique, jsonFile);
-
-        console.log(`\n   ✅ Saved ${unique.length} candles → ${csvFile}`);
-        totalFiles++;
+        const jsonFile = path.join(dir, `${inter.name}.json`);
+        fs.writeFileSync(jsonFile, JSON.stringify(allData, null, 2));
+        console.log(`\n    💾 Saved ${allData.length} total candles to ${inter.name}.json`);
       } else {
-        console.log(`\n   ⚠️  No data received`);
+        console.log(`\n    ❌ No data found for ${inter.name}.`);
       }
     }
   }
-
-  console.log(`\n\n✅ Download complete!`);
-  console.log(`   Files saved: ${totalFiles}`);
-  console.log(`   Errors: ${errors}`);
-  console.log(`   Location: ${OUTPUT}`);
 }
 
-// ─────────────────────────────────────────
-// RUN
-// ─────────────────────────────────────────
-downloadHistorical().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+download().catch(console.error);

@@ -2,38 +2,38 @@ const express = require('express');
 const router  = express.Router();
 const logger  = require('../utils/logger');
 
-// GET /api/strategy/status
-router.get('/status', (req, res) => {
-  const engine = req.app.locals.engine;
-  res.json({ success: true, status: engine.getStatus() });
-});
+router.post('/toggle', (req, res) => {
+  const { strategy, action } = req.body;
+  
+  // Mapping UI names to Backend instances
+  const engineMap = {
+    atmscalping: req.app.locals.scalpEngine,
+    ironcondor: req.app.locals.icEngine,
+    deltaneutral: req.app.locals.dnEngine
+  };
 
-// POST /api/strategy/start
-router.post('/start', (req, res) => {
-  const engine = req.app.locals.engine;
-  engine.start();
-  res.json({ success: true, message: 'Strategy started' });
-});
+  const engine = engineMap[strategy];
 
-// POST /api/strategy/stop
-router.post('/stop', (req, res) => {
-  const engine = req.app.locals.engine;
-  engine.stop();
-  res.json({ success: true, message: 'Strategy stopped' });
-});
+  if (!engine) {
+    logger.error(`Engine not found for: ${strategy}`);
+    return res.status(404).json({ success: false, message: "Engine not found" });
+  }
 
-// POST /api/strategy/exit — Manual exit
-router.post('/exit', (req, res) => {
-  const engine = req.app.locals.engine;
-  const result = engine.manualExit();
-  res.json({ success: result.success, ...result });
-});
-
-// GET /api/strategy/trades — All paper trades
-router.get('/trades', (req, res) => {
-  const engine = req.app.locals.engine;
-  const status = engine.getStatus();
-  res.json({ success: true, trades: status.paperTrades });
+  try {
+    if (action === 'start') {
+      engine.start();
+      logger.info(`Started: ${strategy}`);
+    } else {
+      engine.stop();
+      logger.info(`Stopped: ${strategy}`);
+    }
+    
+    // Send success to stop the UI button from blinking
+    return res.json({ success: true, strategy, running: engine.running });
+  } catch (err) {
+    logger.error(`Toggle Error: ${err.message}`);
+    return res.status(500).json({ success: false, message: err.message });
+  }
 });
 
 module.exports = router;

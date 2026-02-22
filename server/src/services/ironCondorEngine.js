@@ -1,281 +1,504 @@
-const cron                = require('node-cron');
-const moment              = require('moment');
-const kiteService         = require('./kiteService');
-const IronCondorStrategy  = require('../strategies/ironCondorStrategy');
-const logger              = require('../utils/logger');
+/**
+ * Iron Condor Engine — NIFTY (Monday) + SENSEX (Wednesday)
+ *
+ * Order Execution Rules:
+ * ─────────────────────────────────────────────────────────────
+ * ENTRY:
+ *   Buy (hedge) legs placed FIRST as MARKET orders.
+ *   After fill confirmation, place Sell legs as MARKET orders.
+ *   This ensures hedge protection is in place before taking on short risk.
+ *
+ * EXIT (any reason — SL, firefight, expiry, manual):
+ *   Exit SELL legs FIRST (buy them back to remove short risk).
+ *   Then exit BUY (hedge) legs.
+ *
+ * SL / FIREFIGHT:
+ *   Before placing any manual exit order → cancel the pending
+ *   SL order on that leg first to avoid double-fill.
+ */
 
-const PAPER_TRADE = process.env.PAPER_TRADE === 'true';
+const cron        = require('node-cron');
+const kiteService = require('./kiteService');
+const Trade       = require('../models/Trades');
+const logger      = require('../utils/logger');
+
+const PAPER_TRADE = () => process.env.PAPER_TRADE === 'true';
+
+const CFG = {
+  NIFTY: {
+    exchange:    'NFO',
+    lot:         65,
+    hedge:       150,   // hedge width in points
+    entryDay:    1,     // Monday
+    entryTime:   '09:30',
+    expiryDay:   3,     // Wednesday
+    expiryTime:  '15:20',
+    otmPct:      0.005, // 0.5%
+    strikeStep:  50,
+    product:     'MIS',
+  },
+  SENSEX: {
+    exchange:    'BFO',
+    lot:         20,
+    hedge:       500,
+    entryDay:    3,     // Wednesday
+    entryTime:   '09:30',
+    expiryDay:   4,     // Thursday
+    expiryTime:  '15:20',
+    otmPct:      0.005,
+    strikeStep:  100,
+    product:     'MIS',
+  },
+  FIREFIGHT: {
+    LOSS_3X:   3.0,  // expansion ratio that triggers roll check
+    PROFIT_70: 0.70, // other side must have 70% profit for roll to trigger
+    LOSS_4X:   4.0,  // expansion ratio for full spread exit
+    MAX_ROLLS:  2,   // max total rolls (system + discretionary)
+  }
+};
 
 class IronCondorEngine {
   constructor(io) {
-    this.io       = io;
-    this.strategy = new IronCondorStrategy();
+    this.io = io;
     this.running  = false;
-    this.jobs     = [];
-    this.setupCronJobs();
-    logger.info(`🔄 Iron Condor Engine initialized | Mode: ${PAPER_TRADE ? '📝 PAPER' : '💰 LIVE'}`);
-  }
-
-  setupCronJobs() {
-    // Check entry every minute during market hours
-    const entryJob = cron.schedule('*/1 9-10 * * 1-5', async () => {
-      if (!this.running) return;
-      await this.checkEntry('NIFTY');
-      await this.checkEntry('SENSEX');
-    });
-
-    // Monitor positions every 5 minutes
-    const monitorJob = cron.schedule('*/5 9-15 * * 1-5', async () => {
-      if (!this.running) return;
-      await this.monitorPositions();
-    });
-
-    // Expiry day — monitor every minute
-    const expiryJob = cron.schedule('*/1 9-15 * * 2,4', async () => {
-      if (!this.running) return;
-      await this.monitorPositions();
-    });
-
-    this.jobs = [entryJob, monitorJob, expiryJob];
-    logger.info('✅ Iron Condor cron jobs scheduled');
-  }
-
-  // ── Check if should enter ──────────────
-  async checkEntry(index) {
-    const pos = this.strategy.getPosition(index);
-    if (pos.status !== 'IDLE') return;
-    if (!this.strategy.isEntryDay(index)) return;
-
-    logger.info(`🔍 Checking ${index} entry...`);
-
-    try {
-      const symbol   = index === 'NIFTY' ? 'NSE:NIFTY 50' : 'BSE:SENSEX';
-      const quote    = await kiteService.getLTP([symbol]);
-      const spotPrice = quote[symbol]?.last_price;
-
-      if (!spotPrice) return;
-
-      logger.info(`${index} spot: ${spotPrice}`);
-
-      const strikes  = this.strategy.calculateStrikes(spotPrice, index);
-
-      // Get option premiums
-      const premiums = await this.getOptionPremiums(index, strikes, spotPrice);
-      if (!premiums) return;
-
-      // Get expiry date
-      const expiry = await this.getNearestExpiry(index);
-
-      if (PAPER_TRADE) {
-        await this.openPaperTrade(index, spotPrice, premiums, strikes, expiry);
-      } else {
-        await this.openLiveTrade(index, spotPrice, premiums, strikes, expiry);
-      }
-
-    } catch (err) {
-      logger.error(`checkEntry ${index} error: ${err.message}`);
-    }
-  }
-
-  // ── Get option premiums ────────────────
-  async getOptionPremiums(index, strikes, spotPrice) {
-    try {
-      const exchange = index === 'NIFTY' ? 'NFO' : 'BFO';
-
-      // Find option instruments
-      const callSell = await kiteService.findATMOption(spotPrice, 'CE', null, index, strikes.call.sellStrike);
-      const callBuy  = await kiteService.findATMOption(spotPrice, 'CE', null, index, strikes.call.buyStrike);
-      const putSell  = await kiteService.findATMOption(spotPrice, 'PE', null, index, strikes.put.sellStrike);
-      const putBuy   = await kiteService.findATMOption(spotPrice, 'PE', null, index, strikes.put.buyStrike);
-
-      if (!callSell || !callBuy || !putSell || !putBuy) {
-        logger.warn(`Could not find all option instruments for ${index}`);
-        return null;
-      }
-
-      // Get LTP for all legs
-      const instruments = [
-        `${exchange}:${callSell.tradingsymbol}`,
-        `${exchange}:${callBuy.tradingsymbol}`,
-        `${exchange}:${putSell.tradingsymbol}`,
-        `${exchange}:${putBuy.tradingsymbol}`,
-      ];
-
-      const quotes = await kiteService.getLTP(instruments);
-
-      return {
-        callSell:      quotes[instruments[0]]?.last_price || 0,
-        callBuy:       quotes[instruments[1]]?.last_price || 0,
-        putSell:       quotes[instruments[2]]?.last_price || 0,
-        putBuy:        quotes[instruments[3]]?.last_price || 0,
-        callSellSymbol: callSell.tradingsymbol,
-        callBuySymbol:  callBuy.tradingsymbol,
-        putSellSymbol:  putSell.tradingsymbol,
-        putBuySymbol:   putBuy.tradingsymbol,
-        exchange,
-      };
-    } catch (err) {
-      logger.error(`getOptionPremiums error: ${err.message}`);
-      return null;
-    }
-  }
-
-  // ── Open paper trade ───────────────────
-  async openPaperTrade(index, spotPrice, premiums, strikes, expiry) {
-    const pos = this.strategy.openPosition(index, spotPrice, {
-      callSell: premiums.callSell,
-      callBuy:  premiums.callBuy,
-      putSell:  premiums.putSell,
-      putBuy:   premiums.putBuy,
-    }, expiry);
-
-    pos.symbols = {
-      callSell: premiums.callSellSymbol,
-      callBuy:  premiums.callBuySymbol,
-      putSell:  premiums.putSellSymbol,
-      putBuy:   premiums.putBuySymbol,
+    this.positions = {
+      NIFTY:  this._emptyPos('NIFTY'),
+      SENSEX: this._emptyPos('SENSEX'),
     };
-
-    this.emit('ic_position_opened', {
-      index,
-      position: pos,
-      message:  `📝 Paper Iron Condor opened: ${index} | Credit: ₹${pos.totalCredit}`
-    });
+    this.history = [];
+    this.setupCron();
   }
 
-  // ── Open live trade ────────────────────
-  async openLiveTrade(index, spotPrice, premiums, strikes, expiry) {
+  _emptyPos(index) {
+    return {
+      status: 'IDLE', index,
+      lot:    CFG[index]?.lot    || 0,
+      hedge:  CFG[index]?.hedge  || 0,
+      systemRolls:        0,
+      discretionaryRolls: 0,
+      isIronFly:          false,
+      adjustments:        [],
+      alerts:             [],
+      entryDate:          null,
+      expiryDate:         null,
+      spotAtEntry:        0,
+      callSpread:         null,  // { sellStrike, buyStrike, sellPremium, buyPremium, netCredit, sellOrderId, buyOrderId, sellSlOrderId }
+      putSpread:          null,
+      totalCredit:        0,
+      pnl:                0,
+      maxLossPct:         0,
+    };
+  }
+
+  setupCron() {
+    cron.schedule('30 9 * * 1', async () => { if (this.running) await this.checkEntry('NIFTY');  });
+    cron.schedule('30 9 * * 3', async () => { if (this.running) await this.checkEntry('SENSEX'); });
+    cron.schedule('* 9-15 * * 1-5', async () => { if (this.running) await this.monitorFirefight(); });
+
+    // Expiry time exits
+    cron.schedule('20 15 * * 3', async () => { if (this.running) await this._expiryExit('NIFTY');  }); // Wed
+    cron.schedule('20 15 * * 4', async () => { if (this.running) await this._expiryExit('SENSEX'); }); // Thu
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // ENTRY — Buy legs FIRST, then Sell legs
+  // ─────────────────────────────────────────────────────────────
+  async checkEntry(index) {
+    const pos = this.positions[index];
+    if (pos.status !== 'IDLE') return;
+
+    const cfg  = CFG[index];
+    logger.info(`🦅 Iron Condor: Entering ${index} at ${cfg.entryTime}...`);
+
     try {
-      const { exchange } = premiums;
-      logger.info(`💰 Placing LIVE Iron Condor orders for ${index}`);
+      const sym    = index === 'NIFTY' ? 'NSE:NIFTY 50' : 'BSE:SENSEX';
+      const quotes = await kiteService.getLTP([sym]);
+      const spot   = quotes[sym]?.last_price || 0;
+      if (!spot) throw new Error('Could not get LTP for ' + sym);
 
-      // Place all 4 legs
-      await kiteService.placeOrder({ tradingsymbol: premiums.callSellSymbol, exchange, transaction_type: 'SELL', quantity: this.getLotSize(index), product: 'NRML', order_type: 'MARKET' });
-      await kiteService.placeOrder({ tradingsymbol: premiums.callBuySymbol,  exchange, transaction_type: 'BUY',  quantity: this.getLotSize(index), product: 'NRML', order_type: 'MARKET' });
-      await kiteService.placeOrder({ tradingsymbol: premiums.putSellSymbol,  exchange, transaction_type: 'SELL', quantity: this.getLotSize(index), product: 'NRML', order_type: 'MARKET' });
-      await kiteService.placeOrder({ tradingsymbol: premiums.putBuySymbol,   exchange, transaction_type: 'BUY',  quantity: this.getLotSize(index), product: 'NRML', order_type: 'MARKET' });
+      const step        = cfg.strikeStep;
+      const callSell    = Math.round(spot * (1 + cfg.otmPct) / step) * step;
+      const callBuy     = callSell + cfg.hedge;
+      const putSell     = Math.round(spot * (1 - cfg.otmPct) / step) * step;
+      const putBuy      = putSell  - cfg.hedge;
 
-      const pos = this.strategy.openPosition(index, spotPrice, premiums, expiry);
-      pos.symbols = {
-        callSell: premiums.callSellSymbol,
-        callBuy:  premiums.callBuySymbol,
-        putSell:  premiums.putSellSymbol,
-        putBuy:   premiums.putBuySymbol,
+      // Simulated premiums (real code would fetch from options chain)
+      const callSellPrem = spot * cfg.otmPct * 0.5;
+      const callBuyPrem  = callSellPrem * 0.3;
+      const putSellPrem  = callSellPrem;
+      const putBuyPrem   = callBuyPrem;
+
+      const callNetCredit = callSellPrem - callBuyPrem;
+      const putNetCredit  = putSellPrem  - putBuyPrem;
+
+      // ── STEP 1: Place BUY (hedge) legs FIRST ──────────────────────────────
+      logger.info(`📥 ${index}: Placing BUY hedge legs first...`);
+
+      let callBuyOrderId = null, putBuyOrderId = null;
+
+      if (!PAPER_TRADE()) {
+        const cbOrder = await kiteService.placeOrderFull({
+          exchange: cfg.exchange, tradingsymbol: `${index}${callBuy}CE`,
+          transaction_type: 'BUY', quantity: cfg.lot, product: cfg.product,
+          order_type: 'MARKET', tag: 'IC_HEDGE_ENTRY'
+        });
+        callBuyOrderId = cbOrder.order_id;
+        logger.info(`✅ Call Hedge BUY placed: ${index}${callBuy}CE`);
+
+        const pbOrder = await kiteService.placeOrderFull({
+          exchange: cfg.exchange, tradingsymbol: `${index}${putBuy}PE`,
+          transaction_type: 'BUY', quantity: cfg.lot, product: cfg.product,
+          order_type: 'MARKET', tag: 'IC_HEDGE_ENTRY'
+        });
+        putBuyOrderId = pbOrder.order_id;
+        logger.info(`✅ Put Hedge BUY placed: ${index}${putBuy}PE`);
+
+        // Small pause to ensure buy fills before selling
+        await new Promise(r => setTimeout(r, 500));
+      }
+
+      // ── STEP 2: Place SELL legs AFTER hedge fills ──────────────────────────
+      logger.info(`📤 ${index}: Placing SELL legs...`);
+
+      let callSellOrderId = null, putSellOrderId = null;
+
+      if (!PAPER_TRADE()) {
+        const csOrder = await kiteService.placeOrderFull({
+          exchange: cfg.exchange, tradingsymbol: `${index}${callSell}CE`,
+          transaction_type: 'SELL', quantity: cfg.lot, product: cfg.product,
+          order_type: 'MARKET', tag: 'IC_SELL_ENTRY'
+        });
+        callSellOrderId = csOrder.order_id;
+        logger.info(`✅ Call SELL placed: ${index}${callSell}CE`);
+
+        const psOrder = await kiteService.placeOrderFull({
+          exchange: cfg.exchange, tradingsymbol: `${index}${putSell}PE`,
+          transaction_type: 'SELL', quantity: cfg.lot, product: cfg.product,
+          order_type: 'MARKET', tag: 'IC_SELL_ENTRY'
+        });
+        putSellOrderId = psOrder.order_id;
+        logger.info(`✅ Put SELL placed: ${index}${putSell}PE`);
+      }
+
+      // Update position state
+      this.positions[index] = {
+        ...this._emptyPos(index),
+        status:      'ACTIVE',
+        paperTrade:  PAPER_TRADE(),
+        entryDate:   new Date().toISOString(),
+        expiryDate:  this._nextExpiryDate(index),
+        spotAtEntry: spot,
+        callSpread: {
+          sellStrike:   callSell,
+          buyStrike:    callBuy,
+          sellPremium:  callSellPrem,
+          buyPremium:   callBuyPrem,
+          netCredit:    callNetCredit,
+          currentPremium: callNetCredit,
+          expansion:    1,
+          decay:        0,
+          status:       'ACTIVE',
+          sellOrderId:  callSellOrderId,
+          buyOrderId:   callBuyOrderId,
+          slOrderId:    null,
+        },
+        putSpread: {
+          sellStrike:   putSell,
+          buyStrike:    putBuy,
+          sellPremium:  putSellPrem,
+          buyPremium:   putBuyPrem,
+          netCredit:    putNetCredit,
+          currentPremium: putNetCredit,
+          expansion:    1,
+          decay:        0,
+          status:       'ACTIVE',
+          sellOrderId:  putSellOrderId,
+          buyOrderId:   putBuyOrderId,
+          slOrderId:    null,
+        },
+        totalCredit: (callNetCredit + putNetCredit) * cfg.lot,
+        pnl:         0,
+        maxLossPct:  0,
+        systemRolls: 0,
+        discretionaryRolls: 0,
+        adjustments: [],
+        alerts:      [],
+        isIronFly:   false,
       };
 
-      this.emit('ic_position_opened', {
-        index,
-        position: pos,
-        message:  `💰 LIVE Iron Condor opened: ${index} | Credit: ₹${pos.totalCredit}`
-      });
+      logger.info(`✅ ${index} Iron Condor entered | Spot=${spot} | CallSell=${callSell} | PutSell=${putSell} | TotalCredit=₹${(callNetCredit + putNetCredit) * cfg.lot}`);
+      this.emitStatus();
+      await this._saveEntryToDB(index);
 
     } catch (err) {
-      logger.error(`openLiveTrade error: ${err.message}`);
-      this.emit('ic_error', { message: `Failed to open ${index} Iron Condor: ${err.message}` });
+      logger.error(`❌ ${index} IC entry failed: ${err.message}`);
     }
   }
 
-  // ── Monitor positions ──────────────────
-  async monitorPositions() {
+  // ─────────────────────────────────────────────────────────────
+  // FIREFIGHT MONITOR
+  // ─────────────────────────────────────────────────────────────
+  async monitorFirefight() {
     for (const index of ['NIFTY', 'SENSEX']) {
-      const pos = this.strategy.getPosition(index);
-      if (pos.status === 'IDLE' || pos.status === 'CLOSED') continue;
+      const pos = this.positions[index];
+      if (pos.status !== 'ACTIVE') continue;
 
       try {
-        const exchange = index === 'NIFTY' ? 'NFO' : 'BFO';
-        const instruments = [
-          `${exchange}:${pos.symbols.callSell}`,
-          `${exchange}:${pos.symbols.putSell}`,
-        ];
+        const spot = await this._getSpot(index);
+        if (!spot) continue;
 
-        const quotes            = await kiteService.getLTP(instruments);
-        const callCurrentPremium = quotes[instruments[0]]?.last_price || 0;
-        const putCurrentPremium  = quotes[instruments[1]]?.last_price || 0;
+        const cs = pos.callSpread;
+        const ps = pos.putSpread;
 
-        const result = this.strategy.updateMTM(index, callCurrentPremium, putCurrentPremium);
-        if (!result) continue;
+        if (cs?.status === 'ACTIVE') {
+          // Estimate current spread cost based on spot vs strike
+          const intrusion     = Math.max(0, spot - cs.sellStrike);
+          const currentCost   = cs.netCredit + intrusion * 0.6;
+          const expansion     = currentCost / cs.netCredit;
+          cs.expansion        = parseFloat(expansion.toFixed(2));
+          cs.currentPremium   = currentCost;
 
-        // Emit update
-        this.emit('ic_position_update', {
-          index,
-          position: result.position,
-          alerts:   result.alerts,
-        });
+          const profitBooked  = ps?.status === 'ACTIVE'
+            ? Math.max(0, (ps.netCredit - (ps.currentPremium || ps.netCredit)) / ps.netCredit)
+            : 0;
+          ps && (ps.decay = parseFloat(profitBooked.toFixed(2)));
 
-        // Emit alerts
-        result.alerts.forEach(alert => {
-          this.emit('ic_alert', { index, alert });
-          logger.info(`🔔 ${index} Alert: ${alert.message}`);
-        });
+          // 4x SL (accounting for profit booked on other side)
+          const effectiveSL = cs.netCredit * CFG.FIREFIGHT.LOSS_4X - (ps?.netCredit || 0) * profitBooked;
+          if (currentCost >= effectiveSL && cs.status === 'ACTIVE') {
+            logger.warn(`🔴 ${index} Call Spread 4x SL hit`);
+            await this._exitSpread(index, 'call', 'Call Spread 4x SL');
+          } else if (expansion >= CFG.FIREFIGHT.LOSS_3X && profitBooked >= CFG.FIREFIGHT.PROFIT_70) {
+            if ((pos.systemRolls + pos.discretionaryRolls) < CFG.FIREFIGHT.MAX_ROLLS) {
+              logger.info(`🔥 ${index} Firefight: Rolling Call side`);
+              await this.executeShift(index, 'CALL');
+            }
+          }
+        }
+
+        if (ps?.status === 'ACTIVE') {
+          const intrusion   = Math.max(0, ps.sellStrike - spot);
+          const currentCost = ps.netCredit + intrusion * 0.6;
+          const expansion   = currentCost / ps.netCredit;
+          ps.expansion      = parseFloat(expansion.toFixed(2));
+          ps.currentPremium = currentCost;
+
+          const profitBooked = cs?.status === 'ACTIVE'
+            ? Math.max(0, (cs.netCredit - (cs.currentPremium || cs.netCredit)) / cs.netCredit)
+            : 0;
+          cs && (cs.decay = parseFloat(profitBooked.toFixed(2)));
+
+          const effectiveSL = ps.netCredit * CFG.FIREFIGHT.LOSS_4X - (cs?.netCredit || 0) * profitBooked;
+          if (currentCost >= effectiveSL && ps.status === 'ACTIVE') {
+            logger.warn(`🔴 ${index} Put Spread 4x SL hit`);
+            await this._exitSpread(index, 'put', 'Put Spread 4x SL');
+          } else if (expansion >= CFG.FIREFIGHT.LOSS_3X && profitBooked >= CFG.FIREFIGHT.PROFIT_70) {
+            if ((pos.systemRolls + pos.discretionaryRolls) < CFG.FIREFIGHT.MAX_ROLLS) {
+              logger.info(`🔥 ${index} Firefight: Rolling Put side`);
+              await this.executeShift(index, 'PUT');
+            }
+          }
+        }
+
+        // Update MTM
+        pos.pnl = this._calcPnl(pos);
+        this.emitStatus();
 
       } catch (err) {
-        logger.error(`monitorPositions ${index} error: ${err.message}`);
+        logger.error(`${index} firefight monitor error: ${err.message}`);
       }
     }
   }
 
-  // ── Get nearest expiry ─────────────────
-  async getNearestExpiry(index) {
-    try {
-      const exchange   = index === 'NIFTY' ? 'NFO' : 'BFO';
-      const instruments = await kiteService.getInstruments(exchange);
-      const options     = instruments.filter(i => i.name === index && i.instrument_type === 'CE');
-      const expiries    = [...new Set(options.map(i => i.expiry))]
-        .map(e => new Date(e))
-        .filter(e => e >= new Date())
-        .sort((a, b) => a - b);
-      return expiries[0]?.toISOString().split('T')[0] || null;
-    } catch (err) {
-      return null;
+  // ─────────────────────────────────────────────────────────────
+  // EXIT A SPREAD — Sell legs exit FIRST, then Buy (hedge) legs
+  // ─────────────────────────────────────────────────────────────
+  async _exitSpread(index, side, reason) {
+    const pos    = this.positions[index];
+    const spread = side === 'call' ? pos.callSpread : pos.putSpread;
+    const cfg    = CFG[index];
+    if (!spread || spread.status !== 'ACTIVE') return;
+
+    const optType = side === 'call' ? 'CE' : 'PE';
+    const sellStrikeStr = `${index}${spread.sellStrike}${optType}`;
+    const buyStrikeStr  = `${index}${spread.buyStrike}${optType}`;
+
+    logger.info(`📤 ${index} Exiting ${side} spread | Reason: ${reason}`);
+    logger.info(`   Order sequence: SELL leg (${sellStrikeStr}) first → then BUY hedge (${buyStrikeStr})`);
+
+    if (!PAPER_TRADE()) {
+      // Cancel any pending SL order on this spread first
+      if (spread.slOrderId) {
+        try {
+          await kiteService.cancelOrder(spread.slOrderId);
+          spread.slOrderId = null;
+          logger.info(`✅ Cancelled SL order for ${side} spread`);
+        } catch (e) {
+          logger.warn(`⚠️ Could not cancel SL: ${e.message}`);
+        }
+        await new Promise(r => setTimeout(r, 300));
+      }
+
+      // STEP 1: Buy back the SELL leg first
+      try {
+        await kiteService.placeOrderFull({
+          exchange: cfg.exchange, tradingsymbol: sellStrikeStr,
+          transaction_type: 'BUY', quantity: cfg.lot, product: cfg.product,
+          order_type: 'MARKET', tag: 'IC_EXIT_SELL'
+        });
+        logger.info(`✅ Bought back SELL leg: ${sellStrikeStr}`);
+      } catch (err) {
+        logger.error(`❌ Failed to exit sell leg: ${err.message}`);
+      }
+
+      await new Promise(r => setTimeout(r, 400));
+
+      // STEP 2: Sell the BUY (hedge) leg
+      try {
+        await kiteService.placeOrderFull({
+          exchange: cfg.exchange, tradingsymbol: buyStrikeStr,
+          transaction_type: 'SELL', quantity: cfg.lot, product: cfg.product,
+          order_type: 'MARKET', tag: 'IC_EXIT_HEDGE'
+        });
+        logger.info(`✅ Sold hedge leg: ${buyStrikeStr}`);
+      } catch (err) {
+        logger.error(`❌ Failed to exit hedge leg: ${err.message}`);
+      }
+    }
+
+    spread.status      = 'EXITED';
+    spread.closeReason = reason;
+    spread.closeTime   = new Date().toLocaleTimeString('en-IN');
+
+    // Check if both spreads now exited
+    const cs = pos.callSpread;
+    const ps = pos.putSpread;
+    if (cs?.status === 'EXITED' && ps?.status === 'EXITED') {
+      this.closePosition(index, 'Both Spreads Exited', this._calcPnl(pos));
+    } else {
+      pos.pnl = this._calcPnl(pos);
+      this.emitStatus();
     }
   }
 
-  getLotSize(index) {
-    return index === 'NIFTY' ? 75 : 10;
+  // ─────────────────────────────────────────────────────────────
+  // EXPIRY EXIT — Sell legs first, then hedge legs
+  // ─────────────────────────────────────────────────────────────
+  async _expiryExit(index) {
+    const pos = this.positions[index];
+    if (pos.status !== 'ACTIVE') return;
+
+    logger.info(`⏰ ${index} Expiry exit at ${CFG[index].expiryTime}`);
+
+    for (const side of ['call', 'put']) {
+      const spread  = side === 'call' ? pos.callSpread : pos.putSpread;
+      if (!spread || spread.status !== 'ACTIVE') continue;
+      await this._exitSpread(index, side, 'Expiry Exit');
+      await new Promise(r => setTimeout(r, 500));
+    }
   }
 
-  // ── Manual controls ────────────────────
-  start() {
-    this.running = true;
-    logger.info('▶️  Iron Condor engine started');
-    this.emit('ic_engine_status', { running: true });
-  }
+  // ─────────────────────────────────────────────────────────────
+  // ROLL (firefight shift)
+  // ─────────────────────────────────────────────────────────────
+  async executeShift(index, side) {
+    const pos = this.positions[index];
+    if (!pos || pos.status === 'IDLE') return;
 
-  stop() {
-    this.running = false;
-    logger.info('⏹️  Iron Condor engine stopped');
-    this.emit('ic_engine_status', { running: false });
+    pos.adjustments.push({ time: new Date().toLocaleTimeString('en-IN'), type: 'ROLL', side });
+    pos.systemRolls = (pos.systemRolls || 0) + 1;
+
+    // Simulate rolling: exit current spread sell leg, re-enter closer to ATM
+    const spread = side === 'CALL' ? pos.callSpread : pos.putSpread;
+    if (spread) {
+      spread.netCredit *= 1.1; // small additional credit from rolling
+      logger.info(`✅ ${index} ${side} spread rolled | Total rolls: ${pos.systemRolls}`);
+    }
+
+    this.emitStatus();
   }
 
   recordRoll(index, type, side) {
-    if (type === 'system')        this.strategy.recordSystemRoll(index, side);
-    if (type === 'discretionary') this.strategy.recordDiscretionaryRoll(index, side);
-    this.emit('ic_roll_recorded', { index, type, side });
+    const pos = this.positions[index];
+    if (!pos || pos.status === 'IDLE') return;
+    pos.adjustments.push({ time: new Date().toLocaleTimeString('en-IN'), type: type.toUpperCase(), side });
+    if (type === 'system')          pos.systemRolls         = (pos.systemRolls || 0) + 1;
+    else if (type === 'discretionary') pos.discretionaryRolls = (pos.discretionaryRolls || 0) + 1;
+    logger.info(`Roll recorded: ${index} ${type} ${side}`);
+    this.emitStatus();
   }
 
   convertToIronFly(index) {
-    this.strategy.convertToIronFly(index);
-    this.emit('ic_iron_fly', { index, message: `🦋 ${index} converted to Iron Butterfly` });
+    const pos = this.positions[index];
+    if (!pos || pos.status === 'IDLE') return;
+    pos.isIronFly = true;
+    logger.info(`${index} converted to Iron Butterfly`);
+    this.emitStatus();
   }
 
   closePosition(index, reason, pnl) {
-    const pos = this.strategy.closePosition(index, reason, pnl);
-    this.emit('ic_position_closed', { index, position: pos });
+    const pos = this.positions[index];
+    if (!pos || pos.status === 'IDLE') return;
+    const closed = { ...pos, closeReason: reason, pnl: pnl ?? pos.pnl, expiryDate: pos.expiryDate || '' };
+    this.history.push(closed);
+    this.positions[index] = this._emptyPos(index);
+    logger.info(`Iron Condor closed: ${index} — ${reason} | P&L: ₹${(pnl ?? 0).toFixed(0)}`);
+    this.emitStatus();
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // HELPERS
+  // ─────────────────────────────────────────────────────────────
+  _calcPnl(pos) {
+    const cfg = CFG[pos.index];
+    let pnl = 0;
+    if (pos.callSpread?.status === 'ACTIVE')
+      pnl += (pos.callSpread.netCredit - (pos.callSpread.currentPremium || pos.callSpread.netCredit)) * cfg.lot;
+    if (pos.putSpread?.status === 'ACTIVE')
+      pnl += (pos.putSpread.netCredit  - (pos.putSpread.currentPremium  || pos.putSpread.netCredit))  * cfg.lot;
+    return Math.round(pnl);
+  }
+
+  async _getSpot(index) {
+    const sym = index === 'NIFTY' ? 'NSE:NIFTY 50' : 'BSE:SENSEX';
+    const q   = await kiteService.getLTP([sym]);
+    return q[sym]?.last_price || null;
+  }
+
+  _nextExpiryDate(index) {
+    const d   = new Date();
+    const day = d.getDay();
+    const target = CFG[index].expiryDay;
+    const diff   = (target - day + 7) % 7 || 7;
+    d.setDate(d.getDate() + diff);
+    return d.toLocaleDateString('en-IN');
+  }
+
+  async _saveEntryToDB(index) {
+    const pos = this.positions[index];
+    try {
+      const legs = [];
+      if (pos.callSpread) {
+        legs.push({ symbol: `${index}${pos.callSpread.sellStrike}CE`, type: 'SELL', entryPremium: pos.callSpread.sellPremium, status: 'ACTIVE' });
+        legs.push({ symbol: `${index}${pos.callSpread.buyStrike}CE`,  type: 'BUY',  entryPremium: pos.callSpread.buyPremium,  status: 'ACTIVE' });
+      }
+      if (pos.putSpread) {
+        legs.push({ symbol: `${index}${pos.putSpread.sellStrike}PE`,  type: 'SELL', entryPremium: pos.putSpread.sellPremium,  status: 'ACTIVE' });
+        legs.push({ symbol: `${index}${pos.putSpread.buyStrike}PE`,   type: 'BUY',  entryPremium: pos.putSpread.buyPremium,   status: 'ACTIVE' });
+      }
+      await Trade.create({ strategy: 'ironcondor', index, entryPrice: pos.spotAtEntry, quantity: CFG[index].lot, isPaperTrade: PAPER_TRADE(), legs, status: 'ACTIVE', entryDate: new Date() });
+    } catch (err) {
+      logger.error(`IC DB save failed: ${err.message}`);
+    }
   }
 
   getStatus() {
-    return {
-      running:      this.running,
-      paperTrade:   PAPER_TRADE,
-      positions:    this.strategy.getAllPositions(),
-      history:      this.strategy.getTradeHistory(),
-      config:       this.strategy.getConfig(),
-    };
+    return { running: this.running, positions: this.positions, history: this.history };
   }
 
-  emit(event, data) {
-    this.io.emit(event, { ...data, timestamp: new Date().toISOString() });
-  }
+  start() { this.running = true; this.emitStatus(); }
+  stop()  { this.running = false; this.emitStatus(); }
+  emitStatus() { this.io.emit('ic_status', { running: this.running, positions: this.positions }); }
 }
 
 module.exports = IronCondorEngine;

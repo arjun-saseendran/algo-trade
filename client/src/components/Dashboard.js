@@ -80,13 +80,13 @@ export default function Dashboard() {
 
   const handleStart = async () => {
     setStartLoading(true);
-    try { await api.post('/api/strategy/start'); }
+    try { await api.post('/api/strategy/toggle', { strategy: 'atmscalping', action: 'start' }); }
     catch (e) {}
     setStartLoading(false);
   };
 
   const handleStop = async () => {
-    try { await api.post('/api/strategy/stop'); }
+    try { await api.post('/api/strategy/toggle', { strategy: 'atmscalping', action: 'stop' }); }
     catch (e) {}
   };
 

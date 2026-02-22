@@ -3,7 +3,8 @@ const router  = express.Router();
 
 // GET /api/trades
 router.get('/', (req, res) => {
-  const engine = req.app.locals.engine;
+  const engine = req.app.locals.scalpEngine;
+  if (!engine) return res.json({ success: true, trades: [], summary: { total: 0, winners: 0, losers: 0, winRate: '0%', totalPnl: '0.00', avgWin: 0, avgLoss: 0 } });
   const status = engine.getStatus();
   const trades = status.paperTrades || [];
 

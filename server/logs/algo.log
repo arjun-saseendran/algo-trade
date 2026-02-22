@@ -1095,3 +1095,1394 @@ Node.js v24.11.1
 [2026-02-21 12:40:31] INFO  🔌 Client connected: XzG-THt2_ThKWWg9AAAD
 [2026-02-21 12:42:33] INFO  🔌 Client disconnected: npcPN4yywYtlrVVlAAAB
 [2026-02-21 12:42:34] INFO  🔌 Client disconnected: XzG-THt2_ThKWWg9AAAD
+[2026-02-22 08:19:38] INFO  Server running on port 3000
+[2026-02-22 08:19:38] INFO  Paper Trade: ON
+[2026-02-22 08:19:38] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:19:38] INFO  MongoDB connected
+[2026-02-22 08:19:45] INFO  🔌 Client connected: OXfV9gMY2YkayxkLAAAC
+[2026-02-22 08:20:06] INFO  🔌 Client connected: K_GScTgXQnI__IK8AAAF
+[2026-02-22 08:20:19] INFO  Kite API connected ✅
+[2026-02-22 08:20:19] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 08:20:29] INFO  Running backtest: ironcondor
+[2026-02-22 08:20:29] ERROR Backtest error (ironcondor): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js:15:30)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js:92:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:20:34] INFO  Running backtest: scalping
+[2026-02-22 08:20:34] ERROR Backtest error (scalping): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestScalping.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/3minute.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestScalping.js:21:34)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestScalping.js:129:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/3minute.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:20:34] INFO  Running backtest: ironcondor
+[2026-02-22 08:20:34] ERROR Backtest error (ironcondor): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js:15:30)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js:92:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:20:34] INFO  Running backtest: deltaneutral
+[2026-02-22 08:20:34] ERROR Backtest error (deltaneutral): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js:24:34)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js:110:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:21:07] INFO  Running backtest: scalping
+[2026-02-22 08:21:07] ERROR Backtest error (scalping): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestScalping.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/3minute.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestScalping.js:21:34)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestScalping.js:129:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/3minute.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:21:07] INFO  Running backtest: ironcondor
+[2026-02-22 08:21:07] ERROR Backtest error (ironcondor): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js:15:30)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestIronCondor.js:92:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:21:07] INFO  Running backtest: deltaneutral
+[2026-02-22 08:21:07] ERROR Backtest error (deltaneutral): Command failed: node /Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+    at Object.readFileSync (node:fs:440:20)
+    at runBacktest (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js:24:34)
+    at Object.<anonymous> (/Users/arjunsaseendran/Developer/algo-trader/server/scripts/backtestDeltaNeutral.js:110:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/arjunsaseendran/Developer/algo-trader/server/data/day.json'
+}
+
+Node.js v24.11.1
+
+[2026-02-22 08:21:47] INFO  🔌 Client disconnected: K_GScTgXQnI__IK8AAAF
+[2026-02-22 08:23:48] INFO  Server running on port 3000
+[2026-02-22 08:23:48] INFO  Paper Trade: ON
+[2026-02-22 08:23:48] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:23:48] INFO  MongoDB connected
+[2026-02-22 08:23:49] INFO  Server running on port 3000
+[2026-02-22 08:23:49] INFO  Paper Trade: ON
+[2026-02-22 08:23:49] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:23:49] INFO  MongoDB connected
+[2026-02-22 08:23:49] INFO  🔌 Client connected: 4BBmFYdjO4gOyq4bAAAB
+[2026-02-22 08:24:11] INFO  Server running on port 3000
+[2026-02-22 08:24:11] INFO  Paper Trade: ON
+[2026-02-22 08:24:11] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:24:11] INFO  MongoDB connected
+[2026-02-22 08:24:11] INFO  Server running on port 3000
+[2026-02-22 08:24:11] INFO  Paper Trade: ON
+[2026-02-22 08:24:11] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:24:11] INFO  MongoDB connected
+[2026-02-22 08:24:12] INFO  🔌 Client connected: bF6_plmHIlcsSxCqAAAB
+[2026-02-22 08:24:19] INFO  Server running on port 3000
+[2026-02-22 08:24:19] INFO  Paper Trade: ON
+[2026-02-22 08:24:19] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:24:19] INFO  MongoDB connected
+[2026-02-22 08:24:20] INFO  🔌 Client connected: N2puEsFkJ9I6hzt8AAAB
+[2026-02-22 08:24:23] INFO  Server running on port 3000
+[2026-02-22 08:24:23] INFO  Paper Trade: ON
+[2026-02-22 08:24:23] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:24:23] INFO  MongoDB connected
+[2026-02-22 08:24:24] INFO  🔌 Client connected: h9_omTxkqGo2gVJtAAAB
+[2026-02-22 08:30:17] INFO  Server running on port 3000
+[2026-02-22 08:30:17] INFO  Paper Trade: ON
+[2026-02-22 08:30:17] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:30:17] INFO  MongoDB connected
+[2026-02-22 08:31:14] INFO  Server running on port 3000
+[2026-02-22 08:31:14] INFO  Paper Trade: ON
+[2026-02-22 08:31:14] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:31:14] INFO  MongoDB connected
+[2026-02-22 08:31:39] INFO  Server running on port 3000
+[2026-02-22 08:31:39] INFO  Paper Trade: ON
+[2026-02-22 08:31:39] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:31:39] INFO  MongoDB connected
+[2026-02-22 08:31:53] INFO  Server running on port 3000
+[2026-02-22 08:31:53] INFO  Paper Trade: ON
+[2026-02-22 08:31:53] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:31:53] INFO  MongoDB connected
+[2026-02-22 08:32:03] INFO  Server running on port 3000
+[2026-02-22 08:32:03] INFO  Paper Trade: ON
+[2026-02-22 08:32:03] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:32:03] INFO  MongoDB connected
+[2026-02-22 08:32:08] INFO  🔌 Client connected: h4bCoQr8VSHtZZJLAAAB
+[2026-02-22 08:32:10] INFO  Running backtest: scalping
+[2026-02-22 08:32:11] INFO  Backtest complete: scalping | Trades: undefined | P&L: ₹undefined
+[2026-02-22 08:32:11] INFO  Running backtest: ironcondor
+[2026-02-22 08:32:11] INFO  Backtest complete: ironcondor | Trades: undefined | P&L: ₹undefined
+[2026-02-22 08:32:11] INFO  Running backtest: deltaneutral
+[2026-02-22 08:32:12] INFO  Server running on port 3000
+[2026-02-22 08:32:12] INFO  Paper Trade: ON
+[2026-02-22 08:32:12] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:32:12] INFO  MongoDB connected
+[2026-02-22 08:32:12] INFO  🔌 Client connected: CwVwfc5ulpXRoUWSAAAB
+[2026-02-22 08:34:38] INFO  Running backtest: deltaneutral
+[2026-02-22 08:34:38] INFO  Backtest complete: deltaneutral | Trades: undefined | P&L: ₹undefined
+[2026-02-22 08:34:39] INFO  Server running on port 3000
+[2026-02-22 08:34:39] INFO  Paper Trade: ON
+[2026-02-22 08:34:39] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:34:39] INFO  MongoDB connected
+[2026-02-22 08:34:39] INFO  🔌 Client connected: yxgqP9dVCCplyd8kAAAB
+[2026-02-22 08:40:21] INFO  Server running on port 3000
+[2026-02-22 08:40:21] INFO  Paper Trade: ON
+[2026-02-22 08:40:21] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:40:21] INFO  MongoDB connected
+[2026-02-22 08:40:21] INFO  🔌 Client connected: -TbG4dduORBq_taJAAAB
+[2026-02-22 08:40:42] INFO  Server running on port 3000
+[2026-02-22 08:40:42] INFO  Paper Trade: ON
+[2026-02-22 08:40:42] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:40:42] INFO  MongoDB connected
+[2026-02-22 08:40:43] INFO  🔌 Client connected: wQHDBiio44ChPe2cAAAB
+[2026-02-22 08:41:08] INFO  Server running on port 3000
+[2026-02-22 08:41:08] INFO  Paper Trade: ON
+[2026-02-22 08:41:08] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:41:08] INFO  MongoDB connected
+[2026-02-22 08:41:09] INFO  🔌 Client connected: 84s-c-CPOgmmQz2AAAAB
+[2026-02-22 08:45:53] INFO  Server running on port 3000
+[2026-02-22 08:45:53] INFO  Paper Trade: ON
+[2026-02-22 08:45:53] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:45:53] INFO  MongoDB connected
+[2026-02-22 08:45:54] INFO  🔌 Client connected: ninEUf-9dZ8f8eeBAAAB
+[2026-02-22 08:47:35] INFO  Server running on port 3000
+[2026-02-22 08:47:35] INFO  Paper Trade: ON
+[2026-02-22 08:47:35] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:47:35] INFO  MongoDB connected
+[2026-02-22 08:49:51] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:49:51] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:49:51] INFO  Server running on port 3000
+[2026-02-22 08:49:51] INFO  Paper Trade: ON
+[2026-02-22 08:49:51] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:49:51] INFO  MongoDB connected
+[2026-02-22 08:51:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:51:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:51:24] INFO  Server running on port 3000
+[2026-02-22 08:51:24] INFO  Paper Trade: ON
+[2026-02-22 08:51:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:51:24] INFO  MongoDB connected
+[2026-02-22 08:53:49] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:53:49] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:53:49] INFO  Server running on port 3000
+[2026-02-22 08:53:49] INFO  Paper Trade: ON
+[2026-02-22 08:53:49] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:53:49] INFO  MongoDB connected
+[2026-02-22 08:54:33] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:54:33] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:54:33] INFO  Server running on port 3000
+[2026-02-22 08:54:33] INFO  Paper Trade: ON
+[2026-02-22 08:54:33] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:54:33] INFO  MongoDB connected
+[2026-02-22 08:57:09] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:57:09] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:57:09] INFO  Server running on port 3000
+[2026-02-22 08:57:09] INFO  Paper Trade: ON
+[2026-02-22 08:57:09] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:57:09] INFO  MongoDB connected
+[2026-02-22 08:57:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:57:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:57:24] INFO  Server running on port 3000
+[2026-02-22 08:57:24] INFO  Paper Trade: ON
+[2026-02-22 08:57:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:57:24] INFO  MongoDB connected
+[2026-02-22 08:57:27] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:57:27] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:57:27] INFO  Server running on port 3000
+[2026-02-22 08:57:27] INFO  Paper Trade: ON
+[2026-02-22 08:57:27] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:57:27] INFO  MongoDB connected
+[2026-02-22 08:57:30] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:57:30] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:57:30] INFO  Server running on port 3000
+[2026-02-22 08:57:30] INFO  Paper Trade: ON
+[2026-02-22 08:57:30] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:57:30] INFO  MongoDB connected
+[2026-02-22 08:58:13] INFO  🔌 Client connected: HzBSlUcrAPMdWmb3AAAB
+[2026-02-22 08:58:17] INFO  🔌 Client disconnected: HzBSlUcrAPMdWmb3AAAB
+[2026-02-22 08:58:17] INFO  🔌 Client connected: qlk7ccrSU-KY-tiGAAAE
+[2026-02-22 08:58:32] INFO  🔌 Client connected: eQdQ5kaZ4801rV2zAAAH
+[2026-02-22 08:58:44] INFO  Kite API connected ✅
+[2026-02-22 08:58:44] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 08:59:28] INFO  Running backtest: scalping
+[2026-02-22 08:59:29] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹2616705.65
+[2026-02-22 08:59:29] INFO  Running backtest: ironcondor
+[2026-02-22 08:59:29] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-486863.75
+[2026-02-22 08:59:29] INFO  Running backtest: deltaneutral
+[2026-02-22 08:59:30] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:59:30] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:59:30] INFO  Server running on port 3000
+[2026-02-22 08:59:30] INFO  Paper Trade: ON
+[2026-02-22 08:59:30] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:59:30] INFO  MongoDB connected
+[2026-02-22 08:59:30] INFO  🔌 Client connected: hvWMM7YeCYX4ovkDAAAB
+[2026-02-22 08:59:30] INFO  🔌 Client connected: eybWMtmSMRNzVNmNAAAD
+[2026-02-22 08:59:38] INFO  Running backtest: deltaneutral
+[2026-02-22 08:59:38] INFO  Backtest complete: deltaneutral | Trades: 231 | P&L: ₹-244259.34
+[2026-02-22 08:59:39] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 08:59:39] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 08:59:39] INFO  Server running on port 3000
+[2026-02-22 08:59:39] INFO  Paper Trade: ON
+[2026-02-22 08:59:39] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 08:59:39] INFO  MongoDB connected
+[2026-02-22 08:59:39] INFO  🔌 Client connected: JkZVl8IJK9dtdj49AAAB
+[2026-02-22 08:59:40] INFO  🔌 Client connected: 6FXQuHV-bov95E1-AAAD
+[2026-02-22 09:00:10] INFO  Running backtest: scalping
+[2026-02-22 09:00:11] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹2616705.65
+[2026-02-22 09:00:11] INFO  Running backtest: ironcondor
+[2026-02-22 09:00:11] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-486863.75
+[2026-02-22 09:00:11] INFO  Running backtest: deltaneutral
+[2026-02-22 09:00:11] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:11] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:11] INFO  Server running on port 3000
+[2026-02-22 09:00:11] INFO  Paper Trade: ON
+[2026-02-22 09:00:11] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:11] INFO  MongoDB connected
+[2026-02-22 09:00:12] INFO  🔌 Client connected: JUT5PEcS5YufjJq_AAAB
+[2026-02-22 09:00:12] INFO  🔌 Client connected: 0S8cQfECBH9RUpAVAAAD
+[2026-02-22 09:00:19] INFO  Running backtest: scalping
+[2026-02-22 09:00:20] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹2616705.65
+[2026-02-22 09:00:20] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:20] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:20] INFO  Server running on port 3000
+[2026-02-22 09:00:20] INFO  Paper Trade: ON
+[2026-02-22 09:00:20] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:20] INFO  MongoDB connected
+[2026-02-22 09:00:21] INFO  🔌 Client connected: zodfJpPXh76if2KsAAAB
+[2026-02-22 09:00:22] INFO  🔌 Client connected: otcWoNUtWwIy9B62AAAD
+[2026-02-22 09:00:22] INFO  Running backtest: ironcondor
+[2026-02-22 09:00:22] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-486863.75
+[2026-02-22 09:00:22] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:22] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:22] INFO  Server running on port 3000
+[2026-02-22 09:00:22] INFO  Paper Trade: ON
+[2026-02-22 09:00:22] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:22] INFO  MongoDB connected
+[2026-02-22 09:00:23] INFO  🔌 Client connected: 1THXGsHtrQc3IrWPAAAB
+[2026-02-22 09:00:23] INFO  🔌 Client connected: mz92MPsg-z4goupGAAAD
+[2026-02-22 09:00:24] INFO  Running backtest: deltaneutral
+[2026-02-22 09:00:24] INFO  Backtest complete: deltaneutral | Trades: 231 | P&L: ₹-244259.34
+[2026-02-22 09:00:24] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:24] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:24] INFO  Server running on port 3000
+[2026-02-22 09:00:24] INFO  Paper Trade: ON
+[2026-02-22 09:00:24] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:24] INFO  MongoDB connected
+[2026-02-22 09:00:25] INFO  🔌 Client connected: 5LvWV6eXVFVAsP2BAAAB
+[2026-02-22 09:00:25] INFO  🔌 Client connected: GA8WrfMYCIvgzxLqAAAD
+[2026-02-22 09:00:26] INFO  Running backtest: scalping
+[2026-02-22 09:00:27] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹2616705.65
+[2026-02-22 09:00:28] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:28] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:28] INFO  Server running on port 3000
+[2026-02-22 09:00:28] INFO  Paper Trade: ON
+[2026-02-22 09:00:28] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:28] INFO  MongoDB connected
+[2026-02-22 09:00:28] INFO  🔌 Client connected: mXNnfI11iA7AH2L3AAAB
+[2026-02-22 09:00:28] INFO  Running backtest: ironcondor
+[2026-02-22 09:00:29] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-486863.75
+[2026-02-22 09:00:29] INFO  🔌 Client connected: SorbYoifrgREtoqlAAAD
+[2026-02-22 09:00:29] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:29] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:29] INFO  Server running on port 3000
+[2026-02-22 09:00:29] INFO  Paper Trade: ON
+[2026-02-22 09:00:29] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:29] INFO  MongoDB connected
+[2026-02-22 09:00:30] INFO  🔌 Client connected: o8DAWh2PjW3eBefmAAAB
+[2026-02-22 09:00:30] INFO  Running backtest: deltaneutral
+[2026-02-22 09:00:30] INFO  Backtest complete: deltaneutral | Trades: 231 | P&L: ₹-244259.34
+[2026-02-22 09:00:30] INFO  🔌 Client connected: VgkH9XxtakDADomJAAAD
+[2026-02-22 09:00:31] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:00:31] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:00:31] INFO  Server running on port 3000
+[2026-02-22 09:00:31] INFO  Paper Trade: ON
+[2026-02-22 09:00:31] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:00:31] INFO  MongoDB connected
+[2026-02-22 09:00:31] INFO  🔌 Client connected: p2mMeAI_Z5zMuujKAAAB
+[2026-02-22 09:00:31] INFO  🔌 Client connected: 3gT5Te21k_vvVbkmAAAD
+[2026-02-22 09:03:52] INFO  ✅ Iron Condor cron jobs scheduled
+[2026-02-22 09:03:52] INFO  🔄 Iron Condor Engine initialized | Mode: 📝 PAPER
+[2026-02-22 09:03:52] INFO  Server running on port 3000
+[2026-02-22 09:03:52] INFO  Paper Trade: ON
+[2026-02-22 09:03:52] INFO  Allowed origin: http://localhost:3001
+[2026-02-22 09:03:52] INFO  MongoDB connected
+[2026-02-22 09:04:20] INFO  🔌 Client connected: GMLMEajbcrlyaVNqAAAC
+[2026-02-22 09:04:34] INFO  🔌 Client connected: 68U6QvjjYoxPrLsmAAAF
+[2026-02-22 09:04:44] INFO  Kite API connected ✅
+[2026-02-22 09:04:44] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 09:04:55] INFO  Running backtest: scalping
+[2026-02-22 09:04:56] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹2616705.65
+[2026-02-22 09:04:56] INFO  Running backtest: ironcondor
+[2026-02-22 09:04:56] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-486863.75
+[2026-02-22 09:04:56] INFO  Running backtest: deltaneutral
+[2026-02-22 09:04:56] INFO  Backtest complete: deltaneutral | Trades: 231 | P&L: ₹-244259.34
+[2026-02-22 09:05:45] INFO  🔌 Client disconnected: 68U6QvjjYoxPrLsmAAAF
+[2026-02-22 09:08:23] INFO  Running backtest: scalping
+[2026-02-22 09:08:24] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 09:08:35] INFO  Running backtest: scalping
+[2026-02-22 09:08:36] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 09:33:37] INFO  🔌 Client disconnected: GMLMEajbcrlyaVNqAAAC
+[2026-02-22 11:09:05] INFO  🔌 Client connected: MjmW6YVpYTfJki4UAAAH
+[2026-02-22 11:10:16] INFO  Running backtest: ironcondor
+[2026-02-22 11:10:16] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:10:48] INFO  Running backtest: ironcondor
+[2026-02-22 11:10:48] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:10:49] INFO  Running backtest: ironcondor
+[2026-02-22 11:10:49] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:10:50] INFO  Running backtest: ironcondor
+[2026-02-22 11:10:50] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:12:13] INFO  🔌 Client disconnected: MjmW6YVpYTfJki4UAAAH
+[2026-02-22 11:13:15] INFO  🔌 Client connected: Nbq_ZzEJulRFZlzQAAAJ
+[2026-02-22 11:13:16] INFO  Running backtest: ironcondor
+[2026-02-22 11:13:17] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:13:20] INFO  Running backtest: ironcondor
+[2026-02-22 11:13:21] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:23:35] INFO  🔌 Client disconnected: Nbq_ZzEJulRFZlzQAAAJ
+[2026-02-22 11:26:18] INFO  🔌 Client connected: VAuXsMMq-0-8BgnAAAAL
+[2026-02-22 11:28:13] INFO  Running backtest: ironcondor
+[2026-02-22 11:28:13] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:28:18] INFO  Running backtest: ironcondor
+[2026-02-22 11:28:18] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:29:38] INFO  Running backtest: scalping
+[2026-02-22 11:29:39] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 11:29:39] INFO  Running backtest: ironcondor
+[2026-02-22 11:29:39] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹16222.15
+[2026-02-22 11:29:39] INFO  Running backtest: deltaneutral
+[2026-02-22 11:29:39] INFO  Backtest complete: deltaneutral | Trades: 231 | P&L: ₹-244259.34
+[2026-02-22 11:40:43] INFO  Running backtest: ironcondor
+[2026-02-22 11:40:43] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 11:40:54] INFO  Running backtest: ironcondor
+[2026-02-22 11:40:54] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 11:45:09] INFO  Running backtest: ironcondor
+[2026-02-22 11:45:09] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 11:45:44] INFO  Running backtest: ironcondor
+[2026-02-22 11:45:44] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 11:56:58] INFO  🔌 Client disconnected: VAuXsMMq-0-8BgnAAAAL
+[2026-02-22 12:20:50] INFO  🔌 Client connected: JpBRW289UPIOfzU0AAAN
+[2026-02-22 12:21:35] INFO  🔌 Client disconnected: JpBRW289UPIOfzU0AAAN
+[2026-02-22 12:21:40] INFO  🔌 Client connected: GEH-4cThy60DsZgIAAAP
+[2026-02-22 12:22:25] INFO  🔌 Client disconnected: GEH-4cThy60DsZgIAAAP
+[2026-02-22 12:24:37] INFO  🔌 Client connected: soBBWBeHaTFLPHkBAAAR
+[2026-02-22 12:24:38] INFO  Running backtest: deltaneutral
+[2026-02-22 12:24:39] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 12:25:34] INFO  Running backtest: scalping
+[2026-02-22 12:25:35] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 12:25:35] INFO  Running backtest: ironcondor
+[2026-02-22 12:25:36] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 12:25:36] INFO  Running backtest: deltaneutral
+[2026-02-22 12:25:36] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 12:26:37] INFO  🔌 Client disconnected: soBBWBeHaTFLPHkBAAAR
+[2026-02-22 12:40:08] INFO  🔌 Client connected: -vXFREC6HK06PnwkAAAT
+[2026-02-22 12:40:16] INFO  Running backtest: scalping
+[2026-02-22 12:40:18] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 12:40:18] INFO  Running backtest: ironcondor
+[2026-02-22 12:40:18] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 12:40:18] INFO  Running backtest: deltaneutral
+[2026-02-22 12:40:18] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 12:40:46] INFO  Running backtest: ironcondor
+[2026-02-22 12:40:46] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 12:41:43] INFO  🔌 Client disconnected: -vXFREC6HK06PnwkAAAT
+[2026-02-22 12:42:31] INFO  🔌 Client connected: iwc2BYFTq9nleRQ2AAAV
+[2026-02-22 12:43:16] INFO  🔌 Client disconnected: iwc2BYFTq9nleRQ2AAAV
+[2026-02-22 13:13:22] INFO  🔌 Client connected: C9IteobquDtPOBI2AAAX
+[2026-02-22 13:14:07] INFO  🔌 Client disconnected: C9IteobquDtPOBI2AAAX
+[2026-02-22 13:18:07] INFO  🔌 Client connected: RtlXM9UbNrFNvYxrAAAZ
+[2026-02-22 13:18:52] INFO  🔌 Client disconnected: RtlXM9UbNrFNvYxrAAAZ
+[2026-02-22 13:31:46] INFO  🔌 Client connected: lwJjKU1Pi_EFWNCKAAAb
+[2026-02-22 13:31:48] INFO  Running backtest: scalping
+[2026-02-22 13:31:48] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 13:31:48] INFO  Running backtest: ironcondor
+[2026-02-22 13:31:48] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 13:31:48] INFO  Running backtest: deltaneutral
+[2026-02-22 13:31:48] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 13:33:21] INFO  🔌 Client disconnected: lwJjKU1Pi_EFWNCKAAAb
+[2026-02-22 13:33:56] INFO  🔌 Client connected: NBGQWEcy0q_Pwj84AAAd
+[2026-02-22 13:35:31] INFO  🔌 Client disconnected: NBGQWEcy0q_Pwj84AAAd
+[2026-02-22 13:47:56] INFO  🔌 Client connected: ONcRXDKPxyJ32K9WAAAf
+[2026-02-22 13:49:06] INFO  🔌 Client disconnected: ONcRXDKPxyJ32K9WAAAf
+[2026-02-22 14:02:18] INFO  🔌 Client connected: 1t77I0PC5BY5uq-UAAAh
+[2026-02-22 14:03:03] INFO  🔌 Client disconnected: 1t77I0PC5BY5uq-UAAAh
+[2026-02-22 14:05:00] INFO  🔌 Client connected: 9IvoUgyBXrSvdZqAAAAj
+[2026-02-22 14:05:18] INFO  Running backtest: scalping
+[2026-02-22 14:05:18] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:05:18] INFO  Running backtest: ironcondor
+[2026-02-22 14:05:18] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 14:05:18] INFO  Running backtest: deltaneutral
+[2026-02-22 14:05:18] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 14:06:10] INFO  🔌 Client disconnected: 9IvoUgyBXrSvdZqAAAAj
+[2026-02-22 14:06:42] INFO  🔌 Client connected: XUXSe7b-fiNnO6YyAAAl
+[2026-02-22 14:06:57] INFO  Running backtest: scalping
+[2026-02-22 14:06:57] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:06:57] INFO  Running backtest: ironcondor
+[2026-02-22 14:06:57] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 14:06:57] INFO  Running backtest: deltaneutral
+[2026-02-22 14:06:57] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 14:07:05] INFO  Running backtest: scalping
+[2026-02-22 14:07:05] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:08:17] INFO  🔌 Client disconnected: XUXSe7b-fiNnO6YyAAAl
+[2026-02-22 14:15:55] INFO  🔌 Client connected: viqHIWXNC2FyRyznAAAn
+[2026-02-22 14:51:09] INFO  🚀 Server running on port 3000
+[2026-02-22 14:51:09] INFO  📈 Paper Trade: ON
+[2026-02-22 14:51:09] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:51:09] INFO  ✅ MongoDB connected
+[2026-02-22 14:51:19] INFO  🚀 Server running on port 3000
+[2026-02-22 14:51:19] INFO  📈 Paper Trade: ON
+[2026-02-22 14:51:19] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:51:19] INFO  ✅ MongoDB connected
+[2026-02-22 14:51:39] INFO  🔌 Client connected: N8K97xT6ZhTLPkorAAAB
+[2026-02-22 14:51:39] INFO  🔌 Client disconnected: N8K97xT6ZhTLPkorAAAB
+[2026-02-22 14:51:51] INFO  🔌 Client connected: Hn-p8yG_ymLiGyHcAAAE
+[2026-02-22 14:52:12] INFO  🔌 Client connected: qmnLjdWA4u5TgNfXAAAH
+[2026-02-22 14:52:23] INFO  Kite API connected ✅
+[2026-02-22 14:52:23] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 14:52:30] INFO  Running backtest: scalping
+[2026-02-22 14:52:30] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:52:30] INFO  Running backtest: ironcondor
+[2026-02-22 14:52:30] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 14:52:30] INFO  Running backtest: deltaneutral
+[2026-02-22 14:52:31] INFO  🚀 Server running on port 3000
+[2026-02-22 14:52:31] INFO  📈 Paper Trade: ON
+[2026-02-22 14:52:31] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:52:31] INFO  ✅ MongoDB connected
+[2026-02-22 14:52:32] INFO  🔌 Client connected: FSKq29uYWtTfiOH_AAAB
+[2026-02-22 14:52:32] INFO  🔌 Client connected: UymJBUAxlALhmpG6AAAD
+[2026-02-22 14:52:39] INFO  Running backtest: scalping
+[2026-02-22 14:52:39] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:52:41] INFO  Running backtest: ironcondor
+[2026-02-22 14:52:41] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 14:52:42] INFO  🚀 Server running on port 3000
+[2026-02-22 14:52:42] INFO  📈 Paper Trade: ON
+[2026-02-22 14:52:42] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:52:42] INFO  ✅ MongoDB connected
+[2026-02-22 14:52:42] INFO  🔌 Client connected: EAtg4bxX8xHg384pAAAB
+[2026-02-22 14:52:42] INFO  Running backtest: deltaneutral
+[2026-02-22 14:52:42] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 14:52:43] INFO  🔌 Client connected: _KtwY7xxoaR2kmlSAAAD
+[2026-02-22 14:52:43] INFO  🚀 Server running on port 3000
+[2026-02-22 14:52:43] INFO  📈 Paper Trade: ON
+[2026-02-22 14:52:43] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:52:43] INFO  ✅ MongoDB connected
+[2026-02-22 14:52:43] INFO  🔌 Client connected: zELVchpCLeFd_wvkAAAB
+[2026-02-22 14:52:44] INFO  🔌 Client connected: PZUsvle94AEDoQ7rAAAD
+[2026-02-22 14:52:44] INFO  Running backtest: ironcondor
+[2026-02-22 14:52:44] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 14:52:45] INFO  🚀 Server running on port 3000
+[2026-02-22 14:52:45] INFO  📈 Paper Trade: ON
+[2026-02-22 14:52:45] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:52:45] INFO  ✅ MongoDB connected
+[2026-02-22 14:52:45] INFO  🔌 Client connected: fBYBPFLO3n7TYLoKAAAB
+[2026-02-22 14:52:45] INFO  🔌 Client connected: fsirr0XdgzK_gwwLAAAD
+[2026-02-22 14:52:46] INFO  Running backtest: scalping
+[2026-02-22 14:52:46] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:53:01] INFO  Running backtest: scalping
+[2026-02-22 14:53:01] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 14:53:01] INFO  Running backtest: ironcondor
+[2026-02-22 14:53:01] INFO  Backtest complete: ironcondor | Trades: 468 | P&L: ₹-130779.52
+[2026-02-22 14:53:01] INFO  Running backtest: deltaneutral
+[2026-02-22 14:53:01] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 14:53:02] INFO  🚀 Server running on port 3000
+[2026-02-22 14:53:02] INFO  📈 Paper Trade: ON
+[2026-02-22 14:53:02] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 14:53:02] INFO  ✅ MongoDB connected
+[2026-02-22 14:53:02] INFO  🔌 Client connected: _laow9jQkl_H-1hpAAAB
+[2026-02-22 14:53:03] INFO  🔌 Client connected: DL2q4IdnM_Z4vPH3AAAD
+[2026-02-22 14:54:49] INFO  🔌 Client disconnected: DL2q4IdnM_Z4vPH3AAAD
+[2026-02-22 15:02:45] INFO  🚀 Server running on port 3000
+[2026-02-22 15:02:45] INFO  📈 Paper Trade: ON
+[2026-02-22 15:02:45] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:02:45] INFO  ✅ MongoDB connected
+[2026-02-22 15:02:45] INFO  🔌 Client connected: c4QMyR33P7y87akXAAAB
+[2026-02-22 15:02:51] INFO  🚀 Server running on port 3000
+[2026-02-22 15:02:51] INFO  📈 Paper Trade: ON
+[2026-02-22 15:02:51] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:02:51] INFO  ✅ MongoDB connected
+[2026-02-22 15:02:52] INFO  🔌 Client connected: g6qXFD5z4wEl8yUVAAAB
+[2026-02-22 15:05:09] INFO  🚀 Server running on port 3000
+[2026-02-22 15:05:09] INFO  📈 Paper Trade: ON
+[2026-02-22 15:05:09] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:05:09] INFO  ✅ MongoDB connected
+[2026-02-22 15:05:10] INFO  🔌 Client connected: 34B-Sn5Co2kbdjsfAAAB
+[2026-02-22 15:11:20] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:11:52] INFO  🔌 Client disconnected: 34B-Sn5Co2kbdjsfAAAB
+[2026-02-22 15:11:52] INFO  🔌 Client connected: pBnZOHjfQ91s4D3OAAAE
+[2026-02-22 15:12:06] INFO  🔌 Client connected: FFBc4nPhydFgfsOiAAAH
+[2026-02-22 15:12:14] INFO  Kite API connected ✅
+[2026-02-22 15:12:14] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 15:12:21] INFO  
+📦 Fetching NIFTY_50...
+[2026-02-22 15:12:21] INFO    🕒 Interval: day
+[2026-02-22 15:12:22] INFO      ✅ Chunk: 2021-01-01 to 2023-09-28 (680 candles)
+[2026-02-22 15:12:23] INFO      ✅ Chunk: 2023-09-28 to 2026-02-22 (598 candles)
+[2026-02-22 15:12:23] INFO      💾 Saved 1278 total candles to day.json
+[2026-02-22 15:12:23] INFO    🕒 Interval: 15minute
+[2026-02-22 15:12:24] INFO  🚀 Server running on port 3000
+[2026-02-22 15:12:24] INFO  📈 Paper Trade: ON
+[2026-02-22 15:12:24] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:12:24] INFO  ✅ MongoDB connected
+[2026-02-22 15:12:24] INFO  🔌 Client connected: H9e9FqnQtxFfQoHMAAAB
+[2026-02-22 15:12:25] INFO  🔌 Client connected: FsLo8-Nv3cVBb048AAAD
+[2026-02-22 15:14:03] INFO  Running backtest: scalping
+[2026-02-22 15:14:03] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:14:03] INFO  Running backtest: ironcondor
+[2026-02-22 15:14:03] INFO  Backtest complete: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:14:04] INFO  Running backtest: deltaneutral
+[2026-02-22 15:14:04] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:14:05] INFO  🚀 Server running on port 3000
+[2026-02-22 15:14:05] INFO  📈 Paper Trade: ON
+[2026-02-22 15:14:05] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:14:05] INFO  ✅ MongoDB connected
+[2026-02-22 15:14:05] INFO  🔌 Client connected: jq-8IO7s19qtENuTAAAB
+[2026-02-22 15:14:05] INFO  🔌 Client connected: 8cFv5ShMBfEsalvGAAAD
+[2026-02-22 15:14:34] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:14:51] INFO  🔌 Client disconnected: jq-8IO7s19qtENuTAAAB
+[2026-02-22 15:14:51] INFO  🔌 Client connected: tLLTJKqbQAoxsoIyAAAG
+[2026-02-22 15:15:09] INFO  🔌 Client connected: 3IDf-cE_HwF57zjqAAAJ
+[2026-02-22 15:15:18] INFO  🔌 Client disconnected: 8cFv5ShMBfEsalvGAAAD
+[2026-02-22 15:15:23] INFO  Kite API connected ✅
+[2026-02-22 15:15:23] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 15:15:37] INFO  
+📦 Fetching NIFTY_50...
+[2026-02-22 15:15:37] INFO    🕒 Interval: day
+[2026-02-22 15:15:37] INFO      ✅ Chunk: 2021-01-01 to 2023-09-28 (680 candles)
+[2026-02-22 15:15:37] INFO      ✅ Chunk: 2023-09-28 to 2026-02-22 (598 candles)
+[2026-02-22 15:15:38] INFO      💾 Saved 1278 total candles to day.json
+[2026-02-22 15:15:38] INFO    🕒 Interval: 15minute
+[2026-02-22 15:15:38] INFO      ✅ Chunk: 2021-01-01 to 2021-04-11 (1659 candles)
+[2026-02-22 15:15:38] INFO  🚀 Server running on port 3000
+[2026-02-22 15:15:38] INFO  📈 Paper Trade: ON
+[2026-02-22 15:15:38] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:15:38] INFO  ✅ MongoDB connected
+[2026-02-22 15:15:39] INFO  🔌 Client connected: 0F7LxeII_Om7K3sGAAAB
+[2026-02-22 15:15:39] INFO  🔌 Client connected: hazxmTmrYFrOq2XmAAAD
+[2026-02-22 15:16:15] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:19:08] INFO  🔌 Client disconnected: hazxmTmrYFrOq2XmAAAD
+[2026-02-22 15:19:12] INFO  Running backtest: scalping
+[2026-02-22 15:19:13] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:19:13] INFO  Running backtest: ironcondor
+[2026-02-22 15:19:13] INFO  Backtest complete: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:19:13] INFO  Running backtest: deltaneutral
+[2026-02-22 15:19:13] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:19:14] INFO  🚀 Server running on port 3000
+[2026-02-22 15:19:14] INFO  📈 Paper Trade: ON
+[2026-02-22 15:19:14] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:19:14] INFO  ✅ MongoDB connected
+[2026-02-22 15:19:14] INFO  🔌 Client connected: Th4E25G6q4e0F0iuAAAB
+[2026-02-22 15:24:30] INFO  🚀 Server running on port 3000
+[2026-02-22 15:24:30] INFO  📈 Paper Trade: ON
+[2026-02-22 15:24:30] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:24:30] INFO  ✅ MongoDB connected
+[2026-02-22 15:24:31] INFO  🔌 Client connected: 0Xnr2tht9ue8pApXAAAB
+[2026-02-22 15:25:38] INFO  🚀 Server running on port 3000
+[2026-02-22 15:25:38] INFO  📈 Paper Trade: ON
+[2026-02-22 15:25:38] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:25:38] INFO  ✅ MongoDB connected
+[2026-02-22 15:25:39] INFO  🔌 Client connected: e9SyVuwXMXjl5IfsAAAB
+[2026-02-22 15:26:53] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:27:38] INFO  🚀 Server running on port 3000
+[2026-02-22 15:27:38] INFO  📈 Paper Trade: ON
+[2026-02-22 15:27:38] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:27:38] INFO  ✅ MongoDB connected
+[2026-02-22 15:27:39] INFO  🔌 Client connected: GT8G3QA7bdW4S5APAAAB
+[2026-02-22 15:27:42] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:27:43] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:27:43] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:27:43] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:27:43] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:27:43] INFO  🚀 Server running on port 3000
+[2026-02-22 15:27:43] INFO  📈 Paper Trade: ON
+[2026-02-22 15:27:43] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:27:43] INFO  ✅ MongoDB connected
+[2026-02-22 15:27:44] INFO  🔌 Client connected: Gc1PJZYS7zYqwwUWAAAB
+[2026-02-22 15:27:48] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:27:48] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:27:48] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:27:48] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:27:48] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:27:49] INFO  🚀 Server running on port 3000
+[2026-02-22 15:27:49] INFO  📈 Paper Trade: ON
+[2026-02-22 15:27:49] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:27:49] INFO  ✅ MongoDB connected
+[2026-02-22 15:27:50] INFO  🔌 Client connected: qzVNf9k7_KXPA6zRAAAB
+[2026-02-22 15:27:55] INFO  🚀 Server running on port 3000
+[2026-02-22 15:27:55] INFO  📈 Paper Trade: ON
+[2026-02-22 15:27:55] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:27:55] INFO  ✅ MongoDB connected
+[2026-02-22 15:27:55] INFO  🔌 Client connected: i9wiunA-H_aRQF1rAAAB
+[2026-02-22 15:28:49] INFO  Running backtest: scalping
+[2026-02-22 15:28:49] INFO  Backtest complete: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:28:49] INFO  Running backtest: ironcondor
+[2026-02-22 15:28:49] INFO  Backtest complete: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:28:49] INFO  Running backtest: deltaneutral
+[2026-02-22 15:28:49] INFO  Backtest complete: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:28:50] INFO  🚀 Server running on port 3000
+[2026-02-22 15:28:50] INFO  📈 Paper Trade: ON
+[2026-02-22 15:28:50] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:28:50] INFO  ✅ MongoDB connected
+[2026-02-22 15:28:51] INFO  🔌 Client connected: JW0r2NYZiXdRO4sQAAAB
+[2026-02-22 15:30:13] INFO  🚀 Server running on port 3000
+[2026-02-22 15:30:13] INFO  📈 Paper Trade: ON
+[2026-02-22 15:30:13] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:30:13] INFO  ✅ MongoDB connected
+[2026-02-22 15:30:14] INFO  🔌 Client connected: eXq9mJ0Agej7Aao2AAAB
+[2026-02-22 15:30:40] INFO  🚀 Server running on port 3000
+[2026-02-22 15:30:40] INFO  📈 Paper Trade: ON
+[2026-02-22 15:30:40] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:30:40] INFO  ✅ MongoDB connected
+[2026-02-22 15:30:41] INFO  🔌 Client connected: xAzWEdlmcFUrHu70AAAB
+[2026-02-22 15:30:46] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:30:46] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:30:46] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:30:46] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:30:46] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:30:47] INFO  🚀 Server running on port 3000
+[2026-02-22 15:30:47] INFO  📈 Paper Trade: ON
+[2026-02-22 15:30:47] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:30:47] INFO  ✅ MongoDB connected
+[2026-02-22 15:30:47] INFO  🔌 Client connected: DIZ3bmTGicX72TK4AAAB
+[2026-02-22 15:30:58] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:30:58] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:30:58] INFO  🚀 Server running on port 3000
+[2026-02-22 15:30:58] INFO  📈 Paper Trade: ON
+[2026-02-22 15:30:58] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:30:58] INFO  ✅ MongoDB connected
+[2026-02-22 15:30:59] INFO  🔌 Client connected: WmNAfn-9AVji4E3-AAAB
+[2026-02-22 15:30:59] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:30:59] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:01] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:01] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:31:02] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:02] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:02] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:02] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:02] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:31:03] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:03] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:31:03] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:31:03] INFO  🔌 Client connected: 7jSMAWYQvN7B0pTRAAAB
+[2026-02-22 15:31:03] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:03] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:03] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:03] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:03] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:04] INFO  🔌 Client connected: A1vqFQ4BJgrZjyDOAAAB
+[2026-02-22 15:31:14] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:31:14] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:14] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:31:14] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:31:14] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:14] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:14] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:14] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:14] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:15] INFO  🔌 Client connected: J6gbkBB-YKRJTKUsAAAB
+[2026-02-22 15:31:16] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:31:16] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:16] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:31:16] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:31:16] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:16] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:16] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:16] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:16] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:17] INFO  🔌 Client connected: d3OAi5QMoyYRSDPFAAAB
+[2026-02-22 15:31:28] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:31:28] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:28] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:31:29] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:31:29] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:29] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:29] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:29] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:29] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:29] INFO  🔌 Client connected: h9EakKHFJawaywkkAAAB
+[2026-02-22 15:31:31] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:32] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:31:32] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:32] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:32] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:32] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:33] INFO  🔌 Client connected: mGdbLAt7moEWu1WnAAAB
+[2026-02-22 15:31:33] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:34] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:31:34] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:34] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:34] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:34] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:34] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:35] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:31:35] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:35] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:35] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:35] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:35] INFO  🔌 Client connected: bfAAVFPC96UW7SAWAAAB
+[2026-02-22 15:31:36] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:31:36] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:31:36] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:36] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:36] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:36] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:37] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:31:37] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:37] INFO  🔌 Client connected: Km_g9jZskSHc1aC6AAAB
+[2026-02-22 15:31:39] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:31:39] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:31:39] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:31:40] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:31:40] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:31:40] INFO  🚀 Server running on port 3000
+[2026-02-22 15:31:40] INFO  📈 Paper Trade: ON
+[2026-02-22 15:31:40] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:31:40] INFO  ✅ MongoDB connected
+[2026-02-22 15:31:41] INFO  🔌 Client connected: mekDUl4XBerqdxyxAAAB
+[2026-02-22 15:32:32] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:32:33] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:32:33] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:32:33] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:32:33] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:32:34] INFO  🚀 Server running on port 3000
+[2026-02-22 15:32:34] INFO  📈 Paper Trade: ON
+[2026-02-22 15:32:34] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:32:34] INFO  ✅ MongoDB connected
+[2026-02-22 15:32:34] INFO  🔌 Client connected: FBgGS3TfCQmmruE-AAAB
+[2026-02-22 15:33:23] INFO  🔌 Client disconnected: FBgGS3TfCQmmruE-AAAB
+[2026-02-22 15:33:23] INFO  🔌 Client connected: 2-rfa2dRI8oZxGCiAAAE
+[2026-02-22 15:33:40] INFO  🔌 Client connected: gfQV5PP4FxOqq2uhAAAH
+[2026-02-22 15:33:51] INFO  Kite API connected ✅
+[2026-02-22 15:33:51] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 15:33:59] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 15:33:59] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 15:33:59] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 15:34:00] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 15:34:00] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 15:34:00] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 15:34:00] INFO  🚀 Server running on port 3000
+[2026-02-22 15:34:00] INFO  📈 Paper Trade: ON
+[2026-02-22 15:34:00] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:34:00] INFO  ✅ MongoDB connected
+[2026-02-22 15:34:01] INFO  🔌 Client connected: rpTALo-8kAEwSV_TAAAB
+[2026-02-22 15:34:01] INFO  🔌 Client connected: uU11sKeES1l70_msAAAD
+[2026-02-22 15:34:06] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:35:25] INFO  🔌 Client disconnected: uU11sKeES1l70_msAAAD
+[2026-02-22 15:36:31] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:36:41] INFO  🔌 Client disconnected: rpTALo-8kAEwSV_TAAAB
+[2026-02-22 15:36:41] INFO  🔌 Client connected: cQB7Ga03SqSHKDQMAAAG
+[2026-02-22 15:37:05] INFO  🔌 Client connected: x8_GPle2B0dJkkWOAAAJ
+[2026-02-22 15:37:14] INFO  Kite API connected ✅
+[2026-02-22 15:37:14] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 15:37:29] INFO  
+📦 Fetching NIFTY_50...
+[2026-02-22 15:37:29] INFO    🕒 Interval: day
+[2026-02-22 15:37:29] INFO      ✅ Chunk: 2021-01-01 to 2023-09-28 (680 candles)
+[2026-02-22 15:37:29] INFO      ✅ Chunk: 2023-09-28 to 2026-02-22 (598 candles)
+[2026-02-22 15:37:30] INFO      💾 Saved 1278 total candles to day.json
+[2026-02-22 15:37:30] INFO    🕒 Interval: 15minute
+[2026-02-22 15:37:30] INFO      ✅ Chunk: 2021-01-01 to 2021-04-11 (1659 candles)
+[2026-02-22 15:37:31] INFO  🚀 Server running on port 3000
+[2026-02-22 15:37:31] INFO  📈 Paper Trade: ON
+[2026-02-22 15:37:31] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:37:31] INFO  ✅ MongoDB connected
+[2026-02-22 15:37:31] INFO  🔌 Client connected: Dvtfd2xU-45OQov8AAAB
+[2026-02-22 15:37:32] INFO  🔌 Client connected: uHa8aWcGYFE6r13WAAAD
+[2026-02-22 15:40:45] INFO  🚀 Server running on port 3000
+[2026-02-22 15:40:45] INFO  📈 Paper Trade: ON
+[2026-02-22 15:40:45] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:40:45] INFO  ✅ MongoDB connected
+[2026-02-22 15:40:46] INFO  🔌 Client connected: 67AiqZPIjgz1sxDwAAAB
+[2026-02-22 15:40:46] INFO  🔌 Client connected: 5T-gfd1__DNH10KhAAAD
+[2026-02-22 15:40:51] INFO  🔌 Client disconnected: 67AiqZPIjgz1sxDwAAAB
+[2026-02-22 15:40:54] ERROR ❌ Kite is not authenticated! Log in via the UI first.
+[2026-02-22 15:41:09] INFO  🔌 Client disconnected: 5T-gfd1__DNH10KhAAAD
+[2026-02-22 15:41:09] INFO  🔌 Client connected: UQZJOQVqZsn08iw1AAAG
+[2026-02-22 15:41:21] INFO  🔌 Client connected: ly4xR_DgBO-TriJmAAAJ
+[2026-02-22 15:41:30] INFO  Kite API connected ✅
+[2026-02-22 15:41:30] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 15:41:36] INFO  
+📦 Fetching NIFTY and saving to MongoDB...
+[2026-02-22 15:41:36] INFO    🕒 Interval: day
+[2026-02-22 15:41:38] INFO      ✅ Chunk: 2021-01-01 to 2023-09-28 (680 candles)
+[2026-02-22 15:41:38] INFO      ✅ Chunk: 2023-09-28 to 2026-02-22 (598 candles)
+[2026-02-22 15:41:39] INFO      ⏳ Preparing to save 1278 candles to MongoDB...
+[2026-02-22 15:41:39] INFO      💾 Successfully saved 1278 candles to MongoDB for day
+[2026-02-22 15:41:39] INFO    🕒 Interval: 15minute
+[2026-02-22 15:41:39] INFO      ✅ Chunk: 2021-01-01 to 2021-04-11 (1659 candles)
+[2026-02-22 15:41:39] INFO      ✅ Chunk: 2021-04-11 to 2021-07-20 (1700 candles)
+[2026-02-22 15:41:40] INFO      ✅ Chunk: 2021-07-20 to 2021-10-28 (1700 candles)
+[2026-02-22 15:41:40] INFO      ✅ Chunk: 2021-10-28 to 2022-02-05 (1704 candles)
+[2026-02-22 15:41:44] INFO      ✅ Chunk: 2022-02-05 to 2022-05-16 (1625 candles)
+[2026-02-22 15:41:45] INFO      ✅ Chunk: 2022-05-16 to 2022-08-24 (1750 candles)
+[2026-02-22 15:41:46] INFO      ✅ Chunk: 2022-08-24 to 2022-12-02 (1679 candles)
+[2026-02-22 15:41:46] INFO      ✅ Chunk: 2022-12-02 to 2023-03-12 (1725 candles)
+[2026-02-22 15:41:47] INFO      ✅ Chunk: 2023-03-12 to 2023-06-20 (1650 candles)
+[2026-02-22 15:41:47] INFO      ✅ Chunk: 2023-06-20 to 2023-09-28 (1725 candles)
+[2026-02-22 15:41:48] INFO      ✅ Chunk: 2023-09-28 to 2024-01-06 (1679 candles)
+[2026-02-22 15:41:48] INFO      ✅ Chunk: 2024-01-06 to 2024-04-15 (1632 candles)
+[2026-02-22 15:41:49] INFO      ✅ Chunk: 2024-04-15 to 2024-07-24 (1682 candles)
+[2026-02-22 15:41:50] INFO      ✅ Chunk: 2024-07-24 to 2024-11-01 (1750 candles)
+[2026-02-22 15:41:50] INFO      ✅ Chunk: 2024-11-01 to 2025-02-09 (1704 candles)
+[2026-02-22 15:41:51] INFO      ✅ Chunk: 2025-02-09 to 2025-05-20 (1600 candles)
+[2026-02-22 15:41:51] INFO      ✅ Chunk: 2025-05-20 to 2025-08-28 (1750 candles)
+[2026-02-22 15:41:52] INFO      ✅ Chunk: 2025-08-28 to 2025-12-06 (1704 candles)
+[2026-02-22 15:41:53] INFO      ✅ Chunk: 2025-12-06 to 2026-02-22 (1325 candles)
+[2026-02-22 15:41:53] INFO      ⏳ Preparing to save 31743 candles to MongoDB...
+[2026-02-22 15:41:55] INFO      💾 Successfully saved 31743 candles to MongoDB for 15minute
+[2026-02-22 15:41:55] INFO    🕒 Interval: 5minute
+[2026-02-22 15:41:55] INFO      ✅ Chunk: 2021-01-01 to 2021-02-20 (2625 candles)
+[2026-02-22 15:41:55] INFO      ✅ Chunk: 2021-02-20 to 2021-04-11 (2351 candles)
+[2026-02-22 15:41:56] INFO      ✅ Chunk: 2021-04-11 to 2021-05-31 (2400 candles)
+[2026-02-22 15:41:57] INFO      ✅ Chunk: 2021-05-31 to 2021-07-20 (2700 candles)
+[2026-02-22 15:41:57] INFO      ✅ Chunk: 2021-07-20 to 2021-09-08 (2550 candles)
+[2026-02-22 15:41:58] INFO      ✅ Chunk: 2021-09-08 to 2021-10-28 (2550 candles)
+[2026-02-22 15:41:59] INFO      ✅ Chunk: 2021-10-28 to 2021-12-17 (2487 candles)
+[2026-02-22 15:41:59] INFO      ✅ Chunk: 2021-12-17 to 2022-02-05 (2625 candles)
+[2026-02-22 15:42:01] INFO      ✅ Chunk: 2022-02-05 to 2022-03-27 (2475 candles)
+[2026-02-22 15:42:01] INFO      ✅ Chunk: 2022-03-27 to 2022-05-16 (2400 candles)
+[2026-02-22 15:42:02] INFO      ✅ Chunk: 2022-05-16 to 2022-07-05 (2700 candles)
+[2026-02-22 15:42:02] INFO      ✅ Chunk: 2022-07-05 to 2022-08-24 (2550 candles)
+[2026-02-22 15:42:03] INFO      ✅ Chunk: 2022-08-24 to 2022-10-13 (2550 candles)
+[2026-02-22 15:42:04] INFO      ✅ Chunk: 2022-10-13 to 2022-12-02 (2487 candles)
+[2026-02-22 15:42:04] INFO      ✅ Chunk: 2022-12-02 to 2023-01-21 (2700 candles)
+[2026-02-22 15:42:05] INFO      ✅ Chunk: 2023-01-21 to 2023-03-12 (2475 candles)
+[2026-02-22 15:42:06] INFO      ✅ Chunk: 2023-03-12 to 2023-05-01 (2325 candles)
+[2026-02-22 15:42:06] INFO      ✅ Chunk: 2023-05-01 to 2023-06-20 (2625 candles)
+[2026-02-22 15:42:07] INFO      ✅ Chunk: 2023-06-20 to 2023-08-09 (2625 candles)
+[2026-02-22 15:42:08] INFO      ✅ Chunk: 2023-08-09 to 2023-09-28 (2550 candles)
+[2026-02-22 15:42:08] INFO      ✅ Chunk: 2023-09-28 to 2023-11-17 (2487 candles)
+[2026-02-22 15:42:09] INFO      ✅ Chunk: 2023-11-17 to 2024-01-06 (2550 candles)
+[2026-02-22 15:42:10] INFO      ✅ Chunk: 2024-01-06 to 2024-02-25 (2550 candles)
+[2026-02-22 15:42:10] INFO      ✅ Chunk: 2024-02-25 to 2024-04-15 (2346 candles)
+[2026-02-22 15:42:11] INFO      ✅ Chunk: 2024-04-15 to 2024-06-04 (2496 candles)
+[2026-02-22 15:42:12] INFO      ✅ Chunk: 2024-06-04 to 2024-07-24 (2550 candles)
+[2026-02-22 15:42:14] INFO      ✅ Chunk: 2024-07-24 to 2024-09-12 (2625 candles)
+[2026-02-22 15:42:15] INFO      ✅ Chunk: 2024-09-12 to 2024-11-01 (2625 candles)
+[2026-02-22 15:42:15] INFO      ✅ Chunk: 2024-11-01 to 2024-12-21 (2487 candles)
+[2026-02-22 15:42:20] INFO      ✅ Chunk: 2024-12-21 to 2025-02-09 (2625 candles)
+[2026-02-22 15:42:22] INFO      ✅ Chunk: 2025-02-09 to 2025-03-31 (2475 candles)
+[2026-02-22 15:42:23] INFO      ✅ Chunk: 2025-03-31 to 2025-05-20 (2325 candles)
+[2026-02-22 15:42:23] INFO      ✅ Chunk: 2025-05-20 to 2025-07-09 (2700 candles)
+[2026-02-22 15:42:24] INFO      ✅ Chunk: 2025-07-09 to 2025-08-28 (2550 candles)
+[2026-02-22 15:42:26] INFO      ✅ Chunk: 2025-08-28 to 2025-10-17 (2625 candles)
+[2026-02-22 15:42:27] INFO      ✅ Chunk: 2025-10-17 to 2025-12-06 (2487 candles)
+[2026-02-22 15:42:28] INFO      ✅ Chunk: 2025-12-06 to 2026-01-25 (2475 candles)
+[2026-02-22 15:42:35] WARN      ⚠️ Skipped: 2026-01-25 (No response from server with error code: ECONNRESET)
+[2026-02-22 15:42:36] INFO      ⏳ Preparing to save 93728 candles to MongoDB...
+[2026-02-22 15:42:40] INFO      💾 Successfully saved 93728 candles to MongoDB for 5minute
+[2026-02-22 15:42:40] INFO    🕒 Interval: 3minute
+[2026-02-22 15:42:41] INFO      ✅ Chunk: 2021-01-01 to 2021-01-31 (2500 candles)
+[2026-02-22 15:42:42] INFO      ✅ Chunk: 2021-01-31 to 2021-03-02 (2543 candles)
+[2026-02-22 15:42:42] INFO      ✅ Chunk: 2021-03-02 to 2021-04-01 (2500 candles)
+[2026-02-22 15:42:43] INFO      ✅ Chunk: 2021-04-01 to 2021-05-01 (2375 candles)
+[2026-02-22 15:42:43] INFO      ✅ Chunk: 2021-05-01 to 2021-05-31 (2375 candles)
+[2026-02-22 15:42:44] INFO      ✅ Chunk: 2021-05-31 to 2021-06-30 (2750 candles)
+[2026-02-22 15:42:45] INFO      ✅ Chunk: 2021-06-30 to 2021-07-30 (2625 candles)
+[2026-02-22 15:42:46] INFO      ✅ Chunk: 2021-07-30 to 2021-08-29 (2500 candles)
+[2026-02-22 15:42:47] INFO      ✅ Chunk: 2021-08-29 to 2021-09-28 (2500 candles)
+[2026-02-22 15:42:47] INFO      ✅ Chunk: 2021-09-28 to 2021-10-28 (2625 candles)
+[2026-02-22 15:42:48] INFO      ✅ Chunk: 2021-10-28 to 2021-11-27 (2395 candles)
+[2026-02-22 15:42:49] INFO      ✅ Chunk: 2021-11-27 to 2021-12-27 (2500 candles)
+[2026-02-22 15:42:50] INFO      ✅ Chunk: 2021-12-27 to 2022-01-26 (2750 candles)
+[2026-02-22 15:42:51] INFO      ✅ Chunk: 2022-01-26 to 2022-02-25 (2625 candles)
+[2026-02-22 15:42:51] INFO      ✅ Chunk: 2022-02-25 to 2022-03-27 (2375 candles)
+[2026-02-22 15:42:52] INFO      ✅ Chunk: 2022-03-27 to 2022-04-26 (2375 candles)
+[2026-02-22 15:42:53] INFO      ✅ Chunk: 2022-04-26 to 2022-05-26 (2625 candles)
+[2026-02-22 15:42:54] INFO      ✅ Chunk: 2022-05-26 to 2022-06-25 (2750 candles)
+[2026-02-22 15:42:54] INFO      ✅ Chunk: 2022-06-25 to 2022-07-25 (2500 candles)
+[2026-02-22 15:42:55] INFO      ✅ Chunk: 2022-07-25 to 2022-08-24 (2500 candles)
+[2026-02-22 15:42:56] INFO      ✅ Chunk: 2022-08-24 to 2022-09-23 (2625 candles)
+[2026-02-22 15:42:57] INFO      ✅ Chunk: 2022-09-23 to 2022-10-23 (2500 candles)
+[2026-02-22 15:42:57] INFO      ✅ Chunk: 2022-10-23 to 2022-11-22 (2270 candles)
+[2026-02-22 15:42:58] INFO      ✅ Chunk: 2022-11-22 to 2022-12-22 (2750 candles)
+[2026-02-22 15:42:59] INFO      ✅ Chunk: 2022-12-22 to 2023-01-21 (2750 candles)
+[2026-02-22 15:43:00] INFO      ✅ Chunk: 2023-01-21 to 2023-02-20 (2375 candles)
+[2026-02-22 15:43:00] INFO      ✅ Chunk: 2023-02-20 to 2023-03-22 (2625 candles)
+[2026-02-22 15:43:01] INFO      ✅ Chunk: 2023-03-22 to 2023-04-21 (2250 candles)
+[2026-02-22 15:43:02] INFO      ✅ Chunk: 2023-04-21 to 2023-05-21 (2500 candles)
+[2026-02-22 15:43:03] INFO      ✅ Chunk: 2023-05-21 to 2023-06-20 (2623 candles)
+[2026-02-22 15:43:04] INFO      ✅ Chunk: 2023-06-20 to 2023-07-20 (2625 candles)
+[2026-02-22 15:43:04] INFO      ✅ Chunk: 2023-07-20 to 2023-08-19 (2625 candles)
+[2026-02-22 15:43:05] INFO      ✅ Chunk: 2023-08-19 to 2023-09-18 (2500 candles)
+[2026-02-22 15:43:06] INFO      ✅ Chunk: 2023-09-18 to 2023-10-18 (2500 candles)
+[2026-02-22 15:43:07] INFO      ✅ Chunk: 2023-10-18 to 2023-11-17 (2520 candles)
+[2026-02-22 15:43:08] INFO      ✅ Chunk: 2023-11-17 to 2023-12-17 (2500 candles)
+[2026-02-22 15:43:08] INFO      ✅ Chunk: 2023-12-17 to 2024-01-16 (2500 candles)
+[2026-02-22 15:43:09] INFO      ✅ Chunk: 2024-01-16 to 2024-02-15 (2625 candles)
+[2026-02-22 15:43:10] INFO      ✅ Chunk: 2024-02-15 to 2024-03-16 (2660 candles)
+[2026-02-22 15:43:11] INFO      ✅ Chunk: 2024-03-16 to 2024-04-15 (2125 candles)
+[2026-02-22 15:43:11] INFO      ✅ Chunk: 2024-04-15 to 2024-05-15 (2499 candles)
+[2026-02-22 15:43:12] INFO      ✅ Chunk: 2024-05-15 to 2024-06-14 (2660 candles)
+[2026-02-22 15:43:13] INFO      ✅ Chunk: 2024-06-14 to 2024-07-14 (2500 candles)
+[2026-02-22 15:43:13] INFO      ✅ Chunk: 2024-07-14 to 2024-08-13 (2500 candles)
+[2026-02-22 15:43:14] INFO      ✅ Chunk: 2024-08-13 to 2024-09-12 (2625 candles)
+[2026-02-22 15:43:15] INFO      ✅ Chunk: 2024-09-12 to 2024-10-12 (2625 candles)
+[2026-02-22 15:43:15] INFO      ✅ Chunk: 2024-10-12 to 2024-11-11 (2395 candles)
+[2026-02-22 15:43:16] INFO      ✅ Chunk: 2024-11-11 to 2024-12-11 (2500 candles)
+[2026-02-22 15:43:17] INFO      ✅ Chunk: 2024-12-11 to 2025-01-10 (2625 candles)
+[2026-02-22 15:43:18] INFO      ✅ Chunk: 2025-01-10 to 2025-02-09 (2750 candles)
+[2026-02-22 15:43:18] INFO      ✅ Chunk: 2025-02-09 to 2025-03-11 (2500 candles)
+[2026-02-22 15:43:20] INFO      ✅ Chunk: 2025-03-11 to 2025-04-10 (2500 candles)
+[2026-02-22 15:43:20] INFO      ✅ Chunk: 2025-04-10 to 2025-05-10 (2250 candles)
+[2026-02-22 15:43:21] INFO      ✅ Chunk: 2025-05-10 to 2025-06-09 (2500 candles)
+[2026-02-22 15:43:22] INFO      ✅ Chunk: 2025-06-09 to 2025-07-09 (2750 candles)
+[2026-02-22 15:43:22] INFO      ✅ Chunk: 2025-07-09 to 2025-08-08 (2750 candles)
+[2026-02-22 15:43:23] INFO      ✅ Chunk: 2025-08-08 to 2025-09-07 (2375 candles)
+[2026-02-22 15:43:24] INFO      ✅ Chunk: 2025-09-07 to 2025-10-07 (2500 candles)
+[2026-02-22 15:43:24] INFO      ✅ Chunk: 2025-10-07 to 2025-11-06 (2395 candles)
+[2026-02-22 15:43:25] INFO      ✅ Chunk: 2025-11-06 to 2025-12-06 (2750 candles)
+[2026-02-22 15:43:26] INFO      ✅ Chunk: 2025-12-06 to 2026-01-05 (2375 candles)
+[2026-02-22 15:43:26] INFO      ✅ Chunk: 2026-01-05 to 2026-02-04 (2625 candles)
+[2026-02-22 15:43:27] INFO      ✅ Chunk: 2026-02-04 to 2026-02-22 (1625 candles)
+[2026-02-22 15:43:27] INFO      ⏳ Preparing to save 158710 candles to MongoDB...
+[2026-02-22 15:43:35] INFO      💾 Successfully saved 158710 candles to MongoDB for 3minute
+[2026-02-22 15:43:35] INFO  
+📦 Fetching SENSEX and saving to MongoDB...
+[2026-02-22 15:43:35] INFO    🕒 Interval: day
+[2026-02-22 15:43:35] INFO      ✅ Chunk: 2021-01-01 to 2023-09-28 (680 candles)
+[2026-02-22 15:43:36] INFO      ✅ Chunk: 2023-09-28 to 2026-02-22 (598 candles)
+[2026-02-22 15:43:36] INFO      ⏳ Preparing to save 1278 candles to MongoDB...
+[2026-02-22 15:43:36] INFO      💾 Successfully saved 1278 candles to MongoDB for day
+[2026-02-22 15:43:36] INFO    🕒 Interval: 15minute
+[2026-02-22 15:43:36] INFO      ✅ Chunk: 2021-01-01 to 2021-04-11 (1665 candles)
+[2026-02-22 15:43:37] INFO      ✅ Chunk: 2021-04-11 to 2021-07-20 (1700 candles)
+[2026-02-22 15:43:37] INFO      ✅ Chunk: 2021-07-20 to 2021-10-28 (1700 candles)
+[2026-02-22 15:43:38] INFO      ✅ Chunk: 2021-10-28 to 2022-02-05 (1704 candles)
+[2026-02-22 15:43:39] INFO      ✅ Chunk: 2022-02-05 to 2022-05-16 (1625 candles)
+[2026-02-22 15:43:39] INFO      ✅ Chunk: 2022-05-16 to 2022-08-24 (1751 candles)
+[2026-02-22 15:43:40] INFO      ✅ Chunk: 2022-08-24 to 2022-12-02 (1679 candles)
+[2026-02-22 15:43:41] INFO      ✅ Chunk: 2022-12-02 to 2023-03-12 (1725 candles)
+[2026-02-22 15:43:41] INFO      ✅ Chunk: 2023-03-12 to 2023-06-20 (1649 candles)
+[2026-02-22 15:43:42] INFO      ✅ Chunk: 2023-06-20 to 2023-09-28 (1725 candles)
+[2026-02-22 15:43:43] INFO      ✅ Chunk: 2023-09-28 to 2024-01-06 (1679 candles)
+[2026-02-22 15:43:44] INFO      ✅ Chunk: 2024-01-06 to 2024-04-15 (1632 candles)
+[2026-02-22 15:43:44] INFO      ✅ Chunk: 2024-04-15 to 2024-07-24 (1682 candles)
+[2026-02-22 15:43:45] INFO      ✅ Chunk: 2024-07-24 to 2024-11-01 (1750 candles)
+[2026-02-22 15:43:46] INFO      ✅ Chunk: 2024-11-01 to 2025-02-09 (1704 candles)
+[2026-02-22 15:43:46] INFO      ✅ Chunk: 2025-02-09 to 2025-05-20 (1600 candles)
+[2026-02-22 15:43:47] INFO      ✅ Chunk: 2025-05-20 to 2025-08-28 (1750 candles)
+[2026-02-22 15:43:47] INFO      ✅ Chunk: 2025-08-28 to 2025-12-06 (1704 candles)
+[2026-02-22 15:43:48] INFO      ✅ Chunk: 2025-12-06 to 2026-02-22 (1325 candles)
+[2026-02-22 15:43:48] INFO      ⏳ Preparing to save 31749 candles to MongoDB...
+[2026-02-22 15:43:50] INFO      💾 Successfully saved 31749 candles to MongoDB for 15minute
+[2026-02-22 15:43:50] INFO    🕒 Interval: 5minute
+[2026-02-22 15:43:50] INFO      ✅ Chunk: 2021-01-01 to 2021-02-20 (2625 candles)
+[2026-02-22 15:43:51] INFO      ✅ Chunk: 2021-02-20 to 2021-04-11 (2370 candles)
+[2026-02-22 15:43:52] INFO      ✅ Chunk: 2021-04-11 to 2021-05-31 (2400 candles)
+[2026-02-22 15:43:52] INFO      ✅ Chunk: 2021-05-31 to 2021-07-20 (2700 candles)
+[2026-02-22 15:43:53] INFO      ✅ Chunk: 2021-07-20 to 2021-09-08 (2550 candles)
+[2026-02-22 15:43:54] INFO      ✅ Chunk: 2021-09-08 to 2021-10-28 (2550 candles)
+[2026-02-22 15:43:55] INFO      ✅ Chunk: 2021-10-28 to 2021-12-17 (2487 candles)
+[2026-02-22 15:43:55] INFO      ✅ Chunk: 2021-12-17 to 2022-02-05 (2625 candles)
+[2026-02-22 15:43:56] INFO      ✅ Chunk: 2022-02-05 to 2022-03-27 (2475 candles)
+[2026-02-22 15:43:57] INFO      ✅ Chunk: 2022-03-27 to 2022-05-16 (2400 candles)
+[2026-02-22 15:43:57] INFO      ✅ Chunk: 2022-05-16 to 2022-07-05 (2700 candles)
+[2026-02-22 15:43:58] INFO      ✅ Chunk: 2022-07-05 to 2022-08-24 (2551 candles)
+[2026-02-22 15:43:59] INFO      ✅ Chunk: 2022-08-24 to 2022-10-13 (2550 candles)
+[2026-02-22 15:43:59] INFO      ✅ Chunk: 2022-10-13 to 2022-12-02 (2487 candles)
+[2026-02-22 15:44:00] INFO      ✅ Chunk: 2022-12-02 to 2023-01-21 (2700 candles)
+[2026-02-22 15:44:00] INFO      ✅ Chunk: 2023-01-21 to 2023-03-12 (2475 candles)
+[2026-02-22 15:44:01] INFO      ✅ Chunk: 2023-03-12 to 2023-05-01 (2322 candles)
+[2026-02-22 15:44:02] INFO      ✅ Chunk: 2023-05-01 to 2023-06-20 (2625 candles)
+[2026-02-22 15:44:03] INFO      ✅ Chunk: 2023-06-20 to 2023-08-09 (2625 candles)
+[2026-02-22 15:44:03] INFO      ✅ Chunk: 2023-08-09 to 2023-09-28 (2550 candles)
+[2026-02-22 15:44:04] INFO      ✅ Chunk: 2023-09-28 to 2023-11-17 (2487 candles)
+[2026-02-22 15:44:05] INFO      ✅ Chunk: 2023-11-17 to 2024-01-06 (2550 candles)
+[2026-02-22 15:44:06] INFO      ✅ Chunk: 2024-01-06 to 2024-02-25 (2550 candles)
+[2026-02-22 15:44:06] INFO      ✅ Chunk: 2024-02-25 to 2024-04-15 (2346 candles)
+[2026-02-22 15:44:07] INFO      ✅ Chunk: 2024-04-15 to 2024-06-04 (2496 candles)
+[2026-02-22 15:44:08] INFO      ✅ Chunk: 2024-06-04 to 2024-07-24 (2550 candles)
+[2026-02-22 15:44:09] INFO      ✅ Chunk: 2024-07-24 to 2024-09-12 (2625 candles)
+[2026-02-22 15:44:09] INFO      ✅ Chunk: 2024-09-12 to 2024-11-01 (2625 candles)
+[2026-02-22 15:44:10] INFO      ✅ Chunk: 2024-11-01 to 2024-12-21 (2487 candles)
+[2026-02-22 15:44:10] INFO      ✅ Chunk: 2024-12-21 to 2025-02-09 (2625 candles)
+[2026-02-22 15:44:11] INFO      ✅ Chunk: 2025-02-09 to 2025-03-31 (2475 candles)
+[2026-02-22 15:44:12] INFO      ✅ Chunk: 2025-03-31 to 2025-05-20 (2325 candles)
+[2026-02-22 15:44:13] INFO      ✅ Chunk: 2025-05-20 to 2025-07-09 (2700 candles)
+[2026-02-22 15:44:13] INFO      ✅ Chunk: 2025-07-09 to 2025-08-28 (2550 candles)
+[2026-02-22 15:44:14] INFO      ✅ Chunk: 2025-08-28 to 2025-10-17 (2625 candles)
+[2026-02-22 15:44:15] INFO      ✅ Chunk: 2025-10-17 to 2025-12-06 (2487 candles)
+[2026-02-22 15:44:15] INFO      ✅ Chunk: 2025-12-06 to 2026-01-25 (2475 candles)
+[2026-02-22 15:44:16] INFO      ✅ Chunk: 2026-01-25 to 2026-02-22 (1500 candles)
+[2026-02-22 15:44:16] INFO      ⏳ Preparing to save 95245 candles to MongoDB...
+[2026-02-22 15:44:21] INFO      💾 Successfully saved 95245 candles to MongoDB for 5minute
+[2026-02-22 15:44:21] INFO    🕒 Interval: 3minute
+[2026-02-22 15:44:21] INFO      ✅ Chunk: 2021-01-01 to 2021-01-31 (2500 candles)
+[2026-02-22 15:44:22] INFO      ✅ Chunk: 2021-01-31 to 2021-03-02 (2575 candles)
+[2026-02-22 15:44:23] INFO      ✅ Chunk: 2021-03-02 to 2021-04-01 (2500 candles)
+[2026-02-22 15:44:23] INFO      ✅ Chunk: 2021-04-01 to 2021-05-01 (2375 candles)
+[2026-02-22 15:44:24] INFO      ✅ Chunk: 2021-05-01 to 2021-05-31 (2375 candles)
+[2026-02-22 15:44:25] INFO      ✅ Chunk: 2021-05-31 to 2021-06-30 (2750 candles)
+[2026-02-22 15:44:25] INFO      ✅ Chunk: 2021-06-30 to 2021-07-30 (2625 candles)
+[2026-02-22 15:44:26] INFO      ✅ Chunk: 2021-07-30 to 2021-08-29 (2500 candles)
+[2026-02-22 15:44:27] INFO      ✅ Chunk: 2021-08-29 to 2021-09-28 (2500 candles)
+[2026-02-22 15:44:28] INFO      ✅ Chunk: 2021-09-28 to 2021-10-28 (2625 candles)
+[2026-02-22 15:44:28] INFO      ✅ Chunk: 2021-10-28 to 2021-11-27 (2395 candles)
+[2026-02-22 15:44:29] INFO      ✅ Chunk: 2021-11-27 to 2021-12-27 (2500 candles)
+[2026-02-22 15:44:29] INFO      ✅ Chunk: 2021-12-27 to 2022-01-26 (2750 candles)
+[2026-02-22 15:44:30] INFO      ✅ Chunk: 2022-01-26 to 2022-02-25 (2625 candles)
+[2026-02-22 15:44:30] INFO      ✅ Chunk: 2022-02-25 to 2022-03-27 (2375 candles)
+[2026-02-22 15:44:31] INFO      ✅ Chunk: 2022-03-27 to 2022-04-26 (2375 candles)
+[2026-02-22 15:44:32] INFO      ✅ Chunk: 2022-04-26 to 2022-05-26 (2625 candles)
+[2026-02-22 15:44:32] INFO      ✅ Chunk: 2022-05-26 to 2022-06-25 (2750 candles)
+[2026-02-22 15:44:33] INFO      ✅ Chunk: 2022-06-25 to 2022-07-25 (2500 candles)
+[2026-02-22 15:44:34] INFO      ✅ Chunk: 2022-07-25 to 2022-08-24 (2502 candles)
+[2026-02-22 15:44:34] INFO      ✅ Chunk: 2022-08-24 to 2022-09-23 (2625 candles)
+[2026-02-22 15:44:35] INFO      ✅ Chunk: 2022-09-23 to 2022-10-23 (2500 candles)
+[2026-02-22 15:44:35] INFO      ✅ Chunk: 2022-10-23 to 2022-11-22 (2270 candles)
+[2026-02-22 15:44:36] INFO      ✅ Chunk: 2022-11-22 to 2022-12-22 (2750 candles)
+[2026-02-22 15:44:37] INFO      ✅ Chunk: 2022-12-22 to 2023-01-21 (2750 candles)
+[2026-02-22 15:44:38] INFO      ✅ Chunk: 2023-01-21 to 2023-02-20 (2375 candles)
+[2026-02-22 15:44:38] INFO      ✅ Chunk: 2023-02-20 to 2023-03-22 (2625 candles)
+[2026-02-22 15:44:39] INFO      ✅ Chunk: 2023-03-22 to 2023-04-21 (2244 candles)
+[2026-02-22 15:44:39] INFO      ✅ Chunk: 2023-04-21 to 2023-05-21 (2500 candles)
+[2026-02-22 15:44:40] INFO      ✅ Chunk: 2023-05-21 to 2023-06-20 (2623 candles)
+[2026-02-22 15:44:40] INFO      ✅ Chunk: 2023-06-20 to 2023-07-20 (2625 candles)
+[2026-02-22 15:44:41] INFO      ✅ Chunk: 2023-07-20 to 2023-08-19 (2625 candles)
+[2026-02-22 15:44:42] INFO      ✅ Chunk: 2023-08-19 to 2023-09-18 (2500 candles)
+[2026-02-22 15:44:43] INFO      ✅ Chunk: 2023-09-18 to 2023-10-18 (2500 candles)
+[2026-02-22 15:44:43] INFO      ✅ Chunk: 2023-10-18 to 2023-11-17 (2520 candles)
+[2026-02-22 15:44:44] INFO      ✅ Chunk: 2023-11-17 to 2023-12-17 (2500 candles)
+[2026-02-22 15:44:45] INFO      ✅ Chunk: 2023-12-17 to 2024-01-16 (2500 candles)
+[2026-02-22 15:44:46] INFO      ✅ Chunk: 2024-01-16 to 2024-02-15 (2625 candles)
+[2026-02-22 15:44:46] INFO      ✅ Chunk: 2024-02-15 to 2024-03-16 (2660 candles)
+[2026-02-22 15:44:47] INFO      ✅ Chunk: 2024-03-16 to 2024-04-15 (2125 candles)
+[2026-02-22 15:44:47] INFO      ✅ Chunk: 2024-04-15 to 2024-05-15 (2500 candles)
+[2026-02-22 15:44:48] INFO      ✅ Chunk: 2024-05-15 to 2024-06-14 (2660 candles)
+[2026-02-22 15:44:49] INFO      ✅ Chunk: 2024-06-14 to 2024-07-14 (2500 candles)
+[2026-02-22 15:44:49] INFO      ✅ Chunk: 2024-07-14 to 2024-08-13 (2500 candles)
+[2026-02-22 15:44:50] INFO      ✅ Chunk: 2024-08-13 to 2024-09-12 (2625 candles)
+[2026-02-22 15:44:51] INFO      ✅ Chunk: 2024-09-12 to 2024-10-12 (2625 candles)
+[2026-02-22 15:44:51] INFO      ✅ Chunk: 2024-10-12 to 2024-11-11 (2395 candles)
+[2026-02-22 15:44:52] INFO      ✅ Chunk: 2024-11-11 to 2024-12-11 (2500 candles)
+[2026-02-22 15:44:53] INFO      ✅ Chunk: 2024-12-11 to 2025-01-10 (2625 candles)
+[2026-02-22 15:44:53] INFO      ✅ Chunk: 2025-01-10 to 2025-02-09 (2750 candles)
+[2026-02-22 15:44:54] INFO      ✅ Chunk: 2025-02-09 to 2025-03-11 (2500 candles)
+[2026-02-22 15:44:55] INFO      ✅ Chunk: 2025-03-11 to 2025-04-10 (2500 candles)
+[2026-02-22 15:44:55] INFO      ✅ Chunk: 2025-04-10 to 2025-05-10 (2250 candles)
+[2026-02-22 15:44:57] INFO      ✅ Chunk: 2025-05-10 to 2025-06-09 (2500 candles)
+[2026-02-22 15:44:57] INFO      ✅ Chunk: 2025-06-09 to 2025-07-09 (2750 candles)
+[2026-02-22 15:44:58] INFO      ✅ Chunk: 2025-07-09 to 2025-08-08 (2750 candles)
+[2026-02-22 15:44:59] INFO      ✅ Chunk: 2025-08-08 to 2025-09-07 (2375 candles)
+[2026-02-22 15:44:59] INFO      ✅ Chunk: 2025-09-07 to 2025-10-07 (2500 candles)
+[2026-02-22 15:45:00] INFO      ✅ Chunk: 2025-10-07 to 2025-11-06 (2395 candles)
+[2026-02-22 15:45:01] INFO      ✅ Chunk: 2025-11-06 to 2025-12-06 (2750 candles)
+[2026-02-22 15:45:01] INFO      ✅ Chunk: 2025-12-06 to 2026-01-05 (2375 candles)
+[2026-02-22 15:45:02] INFO      ✅ Chunk: 2026-01-05 to 2026-02-04 (2625 candles)
+[2026-02-22 15:45:03] INFO      ✅ Chunk: 2026-02-04 to 2026-02-22 (1625 candles)
+[2026-02-22 15:45:04] INFO      ⏳ Preparing to save 158739 candles to MongoDB...
+[2026-02-22 15:45:12] INFO      💾 Successfully saved 158739 candles to MongoDB for 3minute
+[2026-02-22 15:45:12] INFO  🎉 All historical data downloaded and saved to MongoDB successfully!
+[2026-02-22 15:47:31] INFO  🚀 Server running on port 3000
+[2026-02-22 15:47:31] INFO  📈 Paper Trade: ON
+[2026-02-22 15:47:31] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:47:31] INFO  ✅ MongoDB connected
+[2026-02-22 15:47:32] INFO  🔌 Client connected: z9mKUUTrQE80J6vmAAAB
+[2026-02-22 15:47:34] INFO  🔌 Client connected: 7OyIi9ReWFDeMRgDAAAD
+[2026-02-22 15:49:11] INFO  🚀 Server running on port 3000
+[2026-02-22 15:49:11] INFO  📈 Paper Trade: ON
+[2026-02-22 15:49:11] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:49:11] INFO  ✅ MongoDB connected
+[2026-02-22 15:49:14] INFO  🔌 Client connected: Q7D4Tw4h2JJ6C8yYAAAB
+[2026-02-22 15:49:15] INFO  🔌 Client connected: H3auXmAf09pbquV8AAAD
+[2026-02-22 15:50:24] INFO  🚀 Server running on port 3000
+[2026-02-22 15:50:24] INFO  📈 Paper Trade: ON
+[2026-02-22 15:50:24] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:50:24] INFO  ✅ MongoDB connected
+[2026-02-22 15:50:26] INFO  🔌 Client connected: dyfsQlrbC9R0gUpyAAAB
+[2026-02-22 15:50:26] INFO  🔌 Client connected: looX693jV9e_zUiuAAAD
+[2026-02-22 15:51:11] INFO  🔌 Client disconnected: dyfsQlrbC9R0gUpyAAAB
+[2026-02-22 15:53:47] INFO  🚀 Server running on port 3000
+[2026-02-22 15:53:47] INFO  📈 Paper Trade: ON
+[2026-02-22 15:53:47] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 15:53:47] INFO  ✅ MongoDB connected
+[2026-02-22 15:53:49] INFO  🔌 Client connected: N5jYWxqrURgVBXatAAAB
+[2026-02-22 16:01:47] INFO  🚀 Server running on port 3000
+[2026-02-22 16:01:47] INFO  📈 Paper Trade: ON
+[2026-02-22 16:01:47] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:01:47] INFO  ✅ MongoDB connected
+[2026-02-22 16:01:47] INFO  🔌 Client connected: _7GcbNQIGaeBIdSPAAAB
+[2026-02-22 16:01:54] INFO  🚀 Server running on port 3000
+[2026-02-22 16:01:54] INFO  📈 Paper Trade: ON
+[2026-02-22 16:01:54] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:01:54] INFO  ✅ MongoDB connected
+[2026-02-22 16:01:55] INFO  🔌 Client connected: 2nmvCRKb0WBaTN3WAAAB
+[2026-02-22 16:02:27] INFO  🚀 Server running on port 3000
+[2026-02-22 16:02:27] INFO  📈 Paper Trade: ON
+[2026-02-22 16:02:27] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:02:27] INFO  ✅ MongoDB connected
+[2026-02-22 16:02:28] INFO  🔌 Client connected: 2dk_itu7g1Q-kqd-AAAB
+[2026-02-22 16:02:33] INFO  🚀 Server running on port 3000
+[2026-02-22 16:02:33] INFO  📈 Paper Trade: ON
+[2026-02-22 16:02:33] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:02:33] INFO  ✅ MongoDB connected
+[2026-02-22 16:02:34] INFO  🔌 Client connected: 61yjzyh07Shg8rCgAAAB
+[2026-02-22 16:06:03] INFO  🚀 Server running on port 3000
+[2026-02-22 16:06:03] INFO  📈 Paper Trade: ON
+[2026-02-22 16:06:03] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:06:03] INFO  ✅ MongoDB connected
+[2026-02-22 16:06:03] INFO  🔌 Client connected: ANVMquxAMXrRmGIcAAAB
+[2026-02-22 16:06:04] INFO  🚀 Server running on port 3000
+[2026-02-22 16:06:04] INFO  📈 Paper Trade: ON
+[2026-02-22 16:06:04] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:06:04] INFO  ✅ MongoDB connected
+[2026-02-22 16:06:05] INFO  🔌 Client connected: OBOjO-sdPZKoy7UKAAAB
+[2026-02-22 16:06:21] INFO  🚀 Server running on port 3000
+[2026-02-22 16:06:21] INFO  📈 Paper Trade: ON
+[2026-02-22 16:06:21] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:06:21] INFO  ✅ MongoDB connected
+[2026-02-22 16:06:22] INFO  🔌 Client connected: HQ4vLP2HOrhoJzszAAAB
+[2026-02-22 16:06:43] INFO  🚀 Server running on port 3000
+[2026-02-22 16:06:43] INFO  📈 Paper Trade: ON
+[2026-02-22 16:06:43] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:06:43] INFO  ✅ MongoDB connected
+[2026-02-22 16:06:44] INFO  🔌 Client connected: lMktXLacwGsrFVvnAAAB
+[2026-02-22 16:07:02] INFO  🚀 Server running on port 3000
+[2026-02-22 16:07:02] INFO  📈 Paper Trade: ON
+[2026-02-22 16:07:02] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:07:02] INFO  ✅ MongoDB connected
+[2026-02-22 16:07:02] INFO  🚀 Server running on port 3000
+[2026-02-22 16:07:02] INFO  📈 Paper Trade: ON
+[2026-02-22 16:07:02] INFO  🔗 Allowed origin: http://localhost:3001
+[2026-02-22 16:07:02] INFO  ✅ MongoDB connected
+[2026-02-22 16:07:03] INFO  🔌 Client connected: gosFuLEUNalur8osAAAB
+[2026-02-22 16:07:07] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 16:07:08] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 16:07:08] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 16:07:09] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 16:07:09] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 16:07:10] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 16:07:17] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 16:07:18] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 16:07:19] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 16:07:21] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 16:07:22] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 16:07:22] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 16:08:13] INFO  🔌 Client disconnected: gosFuLEUNalur8osAAAB
+[2026-02-22 16:08:13] INFO  🔌 Client connected: hbq2AoRQIkq82jICAAAE
+[2026-02-22 16:08:30] INFO  🔌 Client connected: WWs3DQaNKsjOdtxsAAAH
+[2026-02-22 16:08:46] INFO  Kite API connected ✅
+[2026-02-22 16:08:46] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 16:09:24] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 16:09:25] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 16:09:25] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 16:09:27] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 16:09:27] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 16:09:27] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 16:11:31] INFO  🔌 Client disconnected: WWs3DQaNKsjOdtxsAAAH
+[2026-02-22 16:26:48] INFO  🚀 Server running on port 3000
+[2026-02-22 16:26:48] INFO  ✅ MongoDB connected
+[2026-02-22 16:27:22] INFO  Kite API connected ✅
+[2026-02-22 16:27:22] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 16:33:59] INFO  🚀 Server running on port 3000
+[2026-02-22 16:33:59] INFO  ✅ MongoDB connected
+[2026-02-22 16:34:12] INFO  🚀 Server running on port 3000
+[2026-02-22 16:34:12] INFO  ✅ MongoDB connected
+[2026-02-22 16:34:20] INFO  🚀 Server running on port 3000
+[2026-02-22 16:34:20] INFO  ✅ MongoDB connected
+[2026-02-22 16:35:09] INFO  🚀 Server running on port 3000
+[2026-02-22 16:35:09] INFO  ✅ MongoDB connected
+[2026-02-22 16:39:03] INFO  🚀 Server running on port 3000
+[2026-02-22 16:39:03] INFO  ✅ MongoDB connected
+[2026-02-22 16:39:34] INFO  🚀 Server running on port 3000
+[2026-02-22 16:39:34] INFO  ✅ MongoDB connected
+[2026-02-22 16:41:45] INFO  🚀 Server running on port 3000
+[2026-02-22 16:41:45] INFO  ✅ MongoDB connected
+[2026-02-22 16:41:57] INFO  🚀 Server running on port 3000
+[2026-02-22 16:41:57] INFO  ✅ MongoDB connected
+[2026-02-22 16:42:20] INFO  🚀 Server running on port 3000
+[2026-02-22 16:42:20] INFO  ✅ MongoDB connected
+[2026-02-22 16:43:09] INFO  Kite API connected ✅
+[2026-02-22 16:43:09] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 16:43:28] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 16:43:29] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 16:43:29] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 16:43:30] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 16:43:30] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 16:43:31] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 18:36:50] INFO  🚀 Server running on port 3000
+[2026-02-22 18:36:50] INFO  ✅ MongoDB connected
+[2026-02-22 18:37:05] INFO  🔌 Client connected: TmrqTviE_6xcwxqDAAAC
+[2026-02-22 18:37:22] INFO  🔌 Client connected: -O8HQJJsITgfzt-AAAAF
+[2026-02-22 18:37:34] INFO  Kite API connected ✅
+[2026-02-22 18:37:34] INFO  ✅ Login successful for: Arjun Saseendran
+[2026-02-22 18:37:38] INFO  ATM Scalping engine started ▶️
+[2026-02-22 18:37:38] INFO  Started: atmscalping
+[2026-02-22 18:37:39] INFO  ATM Scalping engine stopped ⏹️
+[2026-02-22 18:37:39] INFO  Stopped: atmscalping
+[2026-02-22 18:37:49] INFO  ATM Scalping engine started ▶️
+[2026-02-22 18:37:49] INFO  Started: atmscalping
+[2026-02-22 18:37:53] INFO  ATM Scalping engine stopped ⏹️
+[2026-02-22 18:37:53] INFO  Stopped: atmscalping
+[2026-02-22 18:38:21] INFO  ATM Scalping engine started ▶️
+[2026-02-22 18:38:21] INFO  Started: atmscalping
+[2026-02-22 18:38:22] INFO  ATM Scalping engine stopped ⏹️
+[2026-02-22 18:38:22] INFO  Stopped: atmscalping
+[2026-02-22 18:38:30] INFO  ▶️ Running backtest script: scalping
+[2026-02-22 18:38:32] INFO  ✅ Backtest complete & saved to DB: scalping | Trades: 1235 | P&L: ₹101286.07
+[2026-02-22 18:38:32] INFO  ▶️ Running backtest script: ironcondor
+[2026-02-22 18:38:33] INFO  ✅ Backtest complete & saved to DB: ironcondor | Trades: 474 | P&L: ₹-138381.12
+[2026-02-22 18:38:33] INFO  ▶️ Running backtest script: deltaneutral
+[2026-02-22 18:38:33] INFO  ✅ Backtest complete & saved to DB: deltaneutral | Trades: 230 | P&L: ₹24371.1
+[2026-02-22 18:38:42] INFO  
+📦 Fetching NIFTY and saving to MongoDB...
+[2026-02-22 18:38:42] INFO    🕒 Interval: day
+[2026-02-22 18:38:42] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:42] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (2 candles)
+[2026-02-22 18:38:42] INFO      ⏳ Preparing to save 2 candles to MongoDB...
+[2026-02-22 18:38:42] INFO      💾 Successfully saved 2 candles to MongoDB for day
+[2026-02-22 18:38:42] INFO    🕒 Interval: 15minute
+[2026-02-22 18:38:42] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:43] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (22 candles)
+[2026-02-22 18:38:43] INFO      ⏳ Preparing to save 22 candles to MongoDB...
+[2026-02-22 18:38:43] INFO      💾 Successfully saved 22 candles to MongoDB for 15minute
+[2026-02-22 18:38:43] INFO    🕒 Interval: 5minute
+[2026-02-22 18:38:43] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:43] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (67 candles)
+[2026-02-22 18:38:43] INFO      ⏳ Preparing to save 67 candles to MongoDB...
+[2026-02-22 18:38:43] INFO      💾 Successfully saved 67 candles to MongoDB for 5minute
+[2026-02-22 18:38:43] INFO    🕒 Interval: 3minute
+[2026-02-22 18:38:43] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:44] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (111 candles)
+[2026-02-22 18:38:44] INFO      ⏳ Preparing to save 111 candles to MongoDB...
+[2026-02-22 18:38:44] INFO      💾 Successfully saved 111 candles to MongoDB for 3minute
+[2026-02-22 18:38:44] INFO  
+📦 Fetching SENSEX and saving to MongoDB...
+[2026-02-22 18:38:44] INFO    🕒 Interval: day
+[2026-02-22 18:38:44] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:44] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (2 candles)
+[2026-02-22 18:38:44] INFO      ⏳ Preparing to save 2 candles to MongoDB...
+[2026-02-22 18:38:44] INFO      💾 Successfully saved 2 candles to MongoDB for day
+[2026-02-22 18:38:44] INFO    🕒 Interval: 15minute
+[2026-02-22 18:38:44] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:45] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (22 candles)
+[2026-02-22 18:38:45] INFO      ⏳ Preparing to save 22 candles to MongoDB...
+[2026-02-22 18:38:45] INFO      💾 Successfully saved 22 candles to MongoDB for 15minute
+[2026-02-22 18:38:45] INFO    🕒 Interval: 5minute
+[2026-02-22 18:38:45] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:45] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (67 candles)
+[2026-02-22 18:38:45] INFO      ⏳ Preparing to save 67 candles to MongoDB...
+[2026-02-22 18:38:45] INFO      💾 Successfully saved 67 candles to MongoDB for 5minute
+[2026-02-22 18:38:45] INFO    🕒 Interval: 3minute
+[2026-02-22 18:38:45] INFO      📅 Downloading from 2026-02-20 (latest in DB: 2026-02-20)
+[2026-02-22 18:38:46] INFO      ✅ Chunk: 2026-02-20 to 2026-02-22 (111 candles)
+[2026-02-22 18:38:46] INFO      ⏳ Preparing to save 111 candles to MongoDB...
+[2026-02-22 18:38:46] INFO      💾 Successfully saved 111 candles to MongoDB for 3minute
+[2026-02-22 18:38:46] INFO  🎉 All historical data downloaded and saved to MongoDB successfully!
+[2026-02-22 18:40:11] INFO  🔌 Client disconnected: -O8HQJJsITgfzt-AAAAF
+[2026-02-22 18:41:10] INFO  🔌 Client disconnected: TmrqTviE_6xcwxqDAAAC

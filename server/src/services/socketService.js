@@ -1,6 +1,9 @@
 const logger = require('../utils/logger');
 
-module.exports = (io) => {
+module.exports = (io, engines) => {
+  // engines = { scalpEngine, icEngine, dnEngine }
+  const { scalpEngine } = engines;
+
   io.on('connection', (socket) => {
     logger.info(`🔌 Client connected: ${socket.id}`);
 
@@ -8,20 +11,19 @@ module.exports = (io) => {
       logger.info(`🔌 Client disconnected: ${socket.id}`);
     });
 
-    // Manual exit from frontend
-    socket.on('manual_exit', () => {
-      const engine = global.tradingEngine;
-      if (engine) {
-        const result = engine.manualExit();
-        socket.emit('manual_exit_result', result);
-      }
+    // FIX 3: Return real status from scalpEngine instead of undefined global
+    socket.on('get_status', () => {
+      const status = scalpEngine ? scalpEngine.getStatus() : { running: false, paperTrade: true };
+      socket.emit('status', status);
     });
 
-    // Get current status
-    socket.on('get_status', () => {
-      const engine = global.tradingEngine;
-      if (engine) {
-        socket.emit('status', engine.getStatus());
+    // Manual exit from frontend
+    socket.on('manual_exit', () => {
+      if (scalpEngine) {
+        scalpEngine.closeAll('MANUAL_EXIT').catch(err =>
+          logger.error('Manual exit error: ' + err.message)
+        );
+        socket.emit('manual_exit_result', { success: true });
       }
     });
   });

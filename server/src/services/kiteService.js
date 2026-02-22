@@ -123,6 +123,32 @@ class KiteService {
   }
 
   // ── Orders ──────────────────────────────
+  // Generic order placer — used by all engines
+  // params: { exchange, tradingsymbol, transaction_type, quantity, product, order_type, price?, trigger_price?, tag? }
+  async placeOrderFull(params) {
+    try {
+      const orderParams = {
+        exchange:         params.exchange         || 'NFO',
+        tradingsymbol:    params.tradingsymbol,
+        transaction_type: params.transaction_type,
+        quantity:         params.quantity,
+        product:          params.product          || this.kite.PRODUCT_MIS,
+        order_type:       params.order_type       || this.kite.ORDER_TYPE_MARKET,
+        validity:         this.kite.VALIDITY_DAY,
+        tag:              params.tag              || 'ALGO',
+      };
+      if (params.price)         orderParams.price         = params.price;
+      if (params.trigger_price) orderParams.trigger_price = params.trigger_price;
+
+      const order = await this.kite.placeOrder('regular', orderParams);
+      logger.info(`Order placed: ${params.tradingsymbol} ${params.transaction_type} qty:${params.quantity} orderId:${order.order_id}`);
+      return order;
+    } catch (err) {
+      logger.error(`placeOrderFull error (${params.tradingsymbol}): ${err.message}`);
+      throw err;
+    }
+  }
+
   async placeOrder(params) {
     try {
       const order = await this.kite.placeOrder('regular', {
@@ -130,7 +156,7 @@ class KiteService {
         tradingsymbol:    params.tradingsymbol,
         transaction_type: this.kite.TRANSACTION_TYPE_BUY,
         quantity:         params.quantity,
-        product:          this.kite.PRODUCT_MIS,   // Intraday
+        product:          this.kite.PRODUCT_MIS,
         order_type:       this.kite.ORDER_TYPE_MARKET,
         validity:         this.kite.VALIDITY_DAY,
         tag:              'ALGO_SCALP'

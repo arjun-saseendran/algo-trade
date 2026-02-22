@@ -129,11 +129,16 @@ export default function BacktestPage() {
   const [running,  setRunning]  = useState(null);
   const [tab,      setTab]      = useState('compare');
   const [error,    setError]    = useState('');
+  
+  // NEW: Download State
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [downloadMsg, setDownloadMsg]     = useState('');
 
   useEffect(() => { loadAll(); }, []);
 
   const loadAll = async () => {
     try {
+      // Assuming you have an endpoint that fetches the saved MongoDB Backtest data
       const res = await api.get('/api/backtest/all-results');
       if (res.data.success) setAllStats(res.data.results);
     } catch {}
@@ -151,6 +156,21 @@ export default function BacktestPage() {
 
   const runAll = async () => { for (const s of STRATEGIES) await runOne(s.key); };
 
+  // NEW: Download Handler
+  const handleDownloadHistory = async () => {
+    setIsDownloading(true);
+    setDownloadMsg('Initiating background sync...');
+    try {
+      const res = await api.post('/api/market/download-history');
+      if (res.data.success) setDownloadMsg('✅ ' + res.data.message);
+      else setDownloadMsg('❌ ' + res.data.message);
+    } catch (err) {
+      setDownloadMsg('❌ Failed to trigger download.');
+    }
+    setTimeout(() => setIsDownloading(false), 2000);
+    setTimeout(() => setDownloadMsg(''), 10000); // clear message after 10s
+  };
+
   const statsArr  = STRATEGIES.map(s => allStats[s.key]);
   const hasAny    = statsArr.some(Boolean);
   const totalPnl  = statsArr.reduce((sum,s) => sum+(s?.totalPnl||0), 0);
@@ -162,7 +182,7 @@ export default function BacktestPage() {
   const btnStyle = (active, color=C.amber) => ({
     background: active ? color+'22' : C.surface, color: active ? color : C.dim,
     border:`1px solid ${active ? color+'44' : C.border}`, borderRadius:8, padding:'6px 14px',
-    cursor:'pointer', fontFamily:'monospace', fontWeight:700, fontSize:12,
+    cursor: active ? 'not-allowed' : 'pointer', fontFamily:'monospace', fontWeight:700, fontSize:12,
   });
 
   return (
@@ -174,13 +194,24 @@ export default function BacktestPage() {
           <h1 style={{ margin:0, fontSize:22, color:'#fff' }}>🔬 Backtest Comparison</h1>
           <p style={{ margin:'4px 0 0', fontSize:11, color:C.dim }}>5 Year Historical — All 3 Strategies Side by Side</p>
         </div>
-        <div style={{ display:'flex', gap:8 }}>
-          <button onClick={runAll} disabled={!!running} style={btnStyle(!running)}>
+        <div style={{ display:'flex', gap:8, alignItems: 'center' }}>
+          {/* NEW: Download Button */}
+          <button onClick={handleDownloadHistory} disabled={isDownloading} style={btnStyle(isDownloading, C.blue)}>
+            {isDownloading ? '⏳ Syncing...' : '⬇️ Sync Data'}
+          </button>
+          <button onClick={runAll} disabled={!!running} style={btnStyle(!!running)}>
             {running ? `⚡ Running ${running}...` : '▶ Run All 3'}
           </button>
           <button onClick={loadAll} style={{ background:C.surface, color:C.dim, border:`1px solid ${C.border}`, borderRadius:8, padding:'8px 14px', cursor:'pointer', fontFamily:'monospace', fontSize:12 }}>↻</button>
         </div>
       </div>
+
+      {/* NEW: Download Status Message */}
+      {downloadMsg && (
+        <div style={{ padding: '8px 12px', background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, fontSize: 11, color: downloadMsg.includes('❌') ? C.red : C.blue, marginBottom: 16 }}>
+          {downloadMsg}
+        </div>
+      )}
 
       {error && <div style={{ background:C.red+'11', border:`1px solid ${C.red}33`, borderRadius:8, padding:'10px 14px', marginBottom:12, fontSize:12, color:C.red }}>❌ {error}</div>}
 
